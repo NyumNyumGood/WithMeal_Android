@@ -1,4 +1,4 @@
-package org.android.wantedhackathon
+package org.android.wantedhackathon.mypage
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,18 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
-import org.android.wantedhackathon.databinding.FragmentReviewBinding
+import org.android.wantedhackathon.databinding.FragmentMypageBinding
 import org.android.wantedhackathon.util.AutoClearedValue
 
 @AndroidEntryPoint
-class ReviewFragment : Fragment(){
-    private var binding by AutoClearedValue<FragmentReviewBinding>()
+class MyPageFragment: Fragment(){
+    private var binding by AutoClearedValue<FragmentMypageBinding>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? ? =  FragmentReviewBinding.inflate(inflater, container, false)?.let {
+    ): View? ? =  FragmentMypageBinding.inflate(inflater, container, false)?.let {
         binding = it
         it.root
     }

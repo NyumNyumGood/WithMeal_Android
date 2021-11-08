@@ -2,10 +2,10 @@ package org.android.wantedhackathon.frame
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import org.android.wantedhackathon.HomeFragment
-import org.android.wantedhackathon.MapFragment
-import org.android.wantedhackathon.MyPageFragment
-import org.android.wantedhackathon.ReviewFragment
+import org.android.wantedhackathon.home.HomeFragment
+import org.android.wantedhackathon.map.MapFragment
+import org.android.wantedhackathon.mypage.MyPageFragment
+import org.android.wantedhackathon.review.ReviewFragment
 
 class MainFrameAdapter(fragment : Fragment) : FragmentStateAdapter(fragment){
     override fun getItemCount() = 4
