@@ -10,7 +10,6 @@ class WithMealApplication: Application() {
         super.onCreate()
         disableDarkMode()
     }
-
     private fun disableDarkMode() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
     }
