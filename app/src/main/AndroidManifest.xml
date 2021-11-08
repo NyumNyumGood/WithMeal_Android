@@ -3,14 +3,17 @@
     package="org.android.wantedhackathon">
 
     <application
+        android:name=".application.WithMealApplication"
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
+        android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WantedHackathon">
         <activity
-            android:name=".MainActivity"
+            android:name=".frame.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
