@@ -1,4 +1,4 @@
-package org.android.wantedhackathon
+package org.android.wantedhackathon.util
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
