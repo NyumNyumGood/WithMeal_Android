@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/mainFrameFragment">
+    <fragment
+        android:id="@+id/mainFrameFragment"
+        android:name="org.android.wantedhackathon.frame.MainFrameFragment"
+        android:label="MainFrameFragment"
+        tools:layout="@layout/fragment_main_frame"/>
+
+</navigation>
