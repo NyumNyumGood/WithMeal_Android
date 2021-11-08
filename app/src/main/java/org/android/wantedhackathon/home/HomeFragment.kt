@@ -1,4 +1,4 @@
-package org.android.wantedhackathon
+package org.android.wantedhackathon.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,18 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
-import org.android.wantedhackathon.databinding.FragmentMypageBinding
+import org.android.wantedhackathon.databinding.FragmentHomeBinding
 import org.android.wantedhackathon.util.AutoClearedValue
 
 @AndroidEntryPoint
-class MyPageFragment  : Fragment(){
-    private var binding by AutoClearedValue<FragmentMypageBinding>()
+class HomeFragment : Fragment(){
+    private var binding by AutoClearedValue<FragmentHomeBinding>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? ? =  FragmentMypageBinding.inflate(inflater, container, false)?.let {
+    ): View? ? =  FragmentHomeBinding.inflate(inflater, container, false)?.let {
         binding = it
         it.root
     }
