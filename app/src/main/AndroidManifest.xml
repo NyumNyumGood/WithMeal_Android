@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.android.wantedhackathon">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name=".application.WithMealApplication"
         android:usesCleartextTraffic="true"
@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.naver.maps.map.vw9tq0cwfh"
+            android:value="vw9tq0cwfh"/>
     </application>
 
 </manifest>
