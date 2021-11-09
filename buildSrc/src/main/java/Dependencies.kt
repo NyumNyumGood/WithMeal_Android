@@ -118,3 +118,7 @@ object Emoji{
     const val SUPPORT_EMOJI = "com.android.support:support-emoji-appcompat:${DependencyVersions.EMOJI_VERSION}"
 }
 
+object NaverMap{
+    const val NAVER_MAP="com.naver.maps:map-sdk:${DependencyVersions.NAVER_MAP_VERSION}"
+}
+

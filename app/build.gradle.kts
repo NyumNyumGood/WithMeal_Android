@@ -87,4 +87,10 @@ dependencies {
 
     //Crypto
     implementation(AndroidX.Crypto.CRYPTO)
+
+    //Naver Map
+    implementation(NaverMap.NAVER_MAP) {
+            exclude(group = "com.android.support")
+        }
+
 }

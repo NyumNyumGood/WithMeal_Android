@@ -51,6 +51,9 @@ object DependencyVersions {
     const val KAKAO_SDK_USER_VERSION = "2.6.0"
     const val KAKAO_USERMGMT_VERSION = "1.27.0"
 
+    //NaverMap
+    const val NAVER_MAP_VERSION="3.13.0"
+
     //Firebase
     const val PLAY_SERVICE_AUTH = "19.2.0"
     const val GOOGLE_SERVICES = "4.3.10"
