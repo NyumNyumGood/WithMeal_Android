@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.map
+package org.android.wantedhackathon.map.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,6 +11,5 @@ class MapViewModel @Inject constructor() : DisposableViewModel() {
     private val _currentLocationMap = MutableLiveData<Boolean>()
     val currentLocationMap : LiveData<Boolean>
         get() = _currentLocationMap
-
 
 }

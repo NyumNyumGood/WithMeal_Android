@@ -3,7 +3,7 @@
     <data>
         <variable
             name="viewModel"
-            type="org.android.wantedhackathon.map.MapViewModel" />
+            type="org.android.wantedhackathon.map.viewmodel.MapViewModel" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
