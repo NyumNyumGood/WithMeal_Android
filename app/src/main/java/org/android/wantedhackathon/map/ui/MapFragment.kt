@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.map
+package org.android.wantedhackathon.map.ui
 
 import android.Manifest
 import android.os.Bundle
@@ -13,6 +13,7 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentMapBinding
+import org.android.wantedhackathon.map.viewmodel.MapViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
 
 @AndroidEntryPoint
