@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="org.android.wantedhackathon.home.data.FeedEntity" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/line_start"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_review_headline"/>
+    <View
+        android:id="@+id/view_review_headline"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardsemibold"
+        android:text="멕시코즈"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_review_headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_start" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_restaurant_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/pretendardregular"
+        android:text="한식"
+        android:textColor="@color/grey6"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name"
+        app:layout_constraintStart_toEndOf="@id/textview_restaurant_name" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_bookmark"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/selector_bookmark"
+        android:button="@null"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_review_headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_start" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/line_end"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_review_headline"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
