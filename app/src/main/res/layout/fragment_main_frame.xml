@@ -27,6 +27,8 @@
             app:labelVisibilityMode="labeled"
             app:itemIconSize="20dp"
             app:itemHorizontalTranslationEnabled="false"
+            app:itemTextAppearanceInactive="@style/Widget.BottomNavigationView"
+            app:itemTextAppearanceActive="@style/Widget.BottomNavigationActiveView"
             app:itemIconTint="@drawable/selector_bottom_icon"
             app:itemTextColor="@drawable/selector_bottom_icon"
             app:layout_constraintBottom_toBottomOf="parent"
