@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">위드밀</string>
-    <string name="user_nickname">어쩌구</string>
+    <string name="user_nickname">박주예</string>
     <string name="user_university">경희대학교</string>
     <string name="following_nickname">밥밥디라라</string>
+    <string name="following_nickname2">행인</string>
+    <string name="following_nickname3">박주쳐</string>
+    <string name="following_nickname4">규니</string>
+    <string name="following_nickname5">메거공</string>
+    <string name="following_nickname6">도치피치</string>
 </resources>

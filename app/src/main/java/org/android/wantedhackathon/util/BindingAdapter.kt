@@ -17,7 +17,7 @@ object BindingAdapter {
     @BindingAdapter("setImageURL")
     fun ImageView.setImageURL(url: String?) {
         if(url == null) {
-            background = ContextCompat.getDrawable(context, R.drawable.ic_launcher_background)
+            background = ContextCompat.getDrawable(context, R.color.transparent)
         } else {
             load(url)
         }
@@ -33,7 +33,7 @@ object BindingAdapter {
     @BindingAdapter("loadDrawable")
     fun loadDrawable(imageView: ImageView, drawable: Int?) {
         if (drawable == null) {
-            imageView.load(R.drawable.ic_launcher_background)
+            imageView.load(R.color.transparent)
         } else {
             imageView.load(drawable)
         }

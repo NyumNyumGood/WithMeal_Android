@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="org.android.wantedhackathon.home.data.FollowingEntity" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="80dp"
     android:layout_marginEnd="16dp">
+
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/image_following_profile"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="@drawable/profile_img"
+        android:id="@+id/button_activate"
+        android:layout_width="7dp"
+        android:layout_height="6dp"
+        loadDrawable="@{data.activateButton}"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_following_profile"
+        loadDrawable="@{data.image}"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="2dp"
+        android:background="@drawable/profile_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textview_following_nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/pretendardmedium"
-        android:text="@string/following_nickname"
+        android:text="@{data.name}"
         android:textColor="@color/white"
         android:textSize="10sp"
         android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/image_following_profile"
-        app:layout_constraintTop_toBottomOf="@id/image_following_profile" />
+        app:layout_constraintTop_toBottomOf="@id/image_following_profile"
+        tools:text="박박디라라"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
