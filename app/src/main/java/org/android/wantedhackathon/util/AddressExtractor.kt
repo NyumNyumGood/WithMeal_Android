@@ -2,7 +2,7 @@ package org.android.wantedhackathon.util
 
 import android.location.Geocoder
 import android.location.Location
-import org.android.wantedhackathon.home.LocationEntity
+import org.android.wantedhackathon.home.data.LocationEntity
 import javax.inject.Inject
 
 class AddressExtractor @Inject constructor(

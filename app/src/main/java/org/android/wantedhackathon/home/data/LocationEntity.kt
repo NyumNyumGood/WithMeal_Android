@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.home
+package org.android.wantedhackathon.home.data
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

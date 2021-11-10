@@ -2,7 +2,7 @@ package org.android.wantedhackathon.frame
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import org.android.wantedhackathon.home.HomeFragment
+import org.android.wantedhackathon.home.ui.HomeFragment
 import org.android.wantedhackathon.map.ui.MapFragment
 import org.android.wantedhackathon.mypage.MyPageFragment
 import org.android.wantedhackathon.review.ReviewFragment
