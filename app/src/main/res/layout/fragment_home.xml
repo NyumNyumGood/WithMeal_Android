@@ -71,7 +71,6 @@
                 android:text="@string/user_university"
                 app:layout_constraintBottom_toBottomOf="@id/textview_nickname"
                 app:layout_constraintStart_toEndOf="@id/textview_nickname"/>
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_user_following"
                 android:layout_width="match_parent"
@@ -84,8 +83,41 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textview_nickname"
                 tools:listitem="@layout/item_user_following" />
-
-
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_home"
+                style="@style/Widget.MaterialComponents.TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/background_tab_layout"
+                app:tabIndicator="@null"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/grey3"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_headline">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FEED" />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOT"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEW"/>
+            </com.google.android.material.tabs.TabLayout>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layoutDirection="ltr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tab_layout_home" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
