@@ -24,6 +24,9 @@
         <item name="fontFamily">@font/pretendardbold</item>
     </style>
 
-
+    <style name="Widget.MaterialComponents.TabLayout" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/pretendardsemibold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
 
 </resources>

@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.home.ui
+package org.android.wantedhackathon.home.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

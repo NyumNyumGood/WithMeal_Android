@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.home.ui
+package org.android.wantedhackathon.home.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentHomeBinding
+import org.android.wantedhackathon.home.ui.adapter.FollowingUserAdpater
 import org.android.wantedhackathon.home.viewmodel.HomeViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
 
