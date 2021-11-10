@@ -16,7 +16,14 @@
 
     <style name="Widget.BottomNavigationView"
         parent="Widget.Design.BottomNavigationView">
-        <item name="fontFamily">@font/pretendardmedium</item>
+        <item name="fontFamily">@font/pretendardregular</item>
     </style>
+
+    <style name="Widget.BottomNavigationActiveView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/pretendardbold</item>
+    </style>
+
+
 
 </resources>
