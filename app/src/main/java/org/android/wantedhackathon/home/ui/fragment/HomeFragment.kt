@@ -36,15 +36,6 @@ class HomeFragment : Fragment(){
         setTabLayoutMediator()
     }
     private fun setTabLayoutMediator(){
-        binding.tabLayoutHome.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-            }
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-            }
-        })
         binding.viewpagerTabLayout.adapter = FeedPagerAdapter(this)
         TabLayoutMediator(binding.tabLayoutHome, binding.viewpagerTabLayout) { tab, position ->
             when(position) {
@@ -52,7 +43,7 @@ class HomeFragment : Fragment(){
                 1 -> tab.text = "HOT"
                 2 -> tab.text = "NEW"
             }
-        }
+        }.attach()
     }
     private fun loadFollowing(){
         binding.recyclerviewUserFollowing.run {
