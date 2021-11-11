@@ -9,6 +9,7 @@ import org.android.wantedhackathon.R
 import org.android.wantedhackathon.base.DisposableViewModel
 import org.android.wantedhackathon.home.data.FeedEntity
 import org.android.wantedhackathon.home.data.FollowingEntity
+import org.android.wantedhackathon.home.data.HotContentEntity
 import org.android.wantedhackathon.home.data.LocationEntity
 import org.android.wantedhackathon.util.AddressExtractor
 import javax.inject.Inject
@@ -34,10 +35,15 @@ class HomeViewModel @Inject constructor(
     val feedReviewList : LiveData<List<FeedEntity>>
         get() = _feedReviewList
 
+    private val _hotReviewList = MutableLiveData<List<HotContentEntity>>()
+    val hotReviewList : LiveData<List<HotContentEntity>>
+        get() = _hotReviewList
+
     init{
         fetchCurrentLocation()
         fetchFollowingUserList()
         fetchFeedReviewList()
+        fetchHotReviewList()
     }
 
     @SuppressLint("MissingPermission")
@@ -115,6 +121,32 @@ class HomeViewModel @Inject constructor(
         )
         _feedReviewList.value = feedReviewList
     }
+
+    private fun fetchHotReviewList(){
+        val hotReviewList = listOf(
+            HotContentEntity(
+                R.drawable.rank1,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank1,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank1,
+                "퀴헨",
+                "한식",
+                2
+            )
+        )
+        _hotReviewList.value = hotReviewList
+    }
+
+
 
 
 }
