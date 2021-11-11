@@ -51,6 +51,7 @@ dependencies {
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation ("androidx.constraintlayout:constraintlayout:2.1.1")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation ("com.github.Muzafferus:ImageList-Lib:1.0.1")
     testImplementation(Test.JUNIT)
     androidTestImplementation(Test.AndroidTest.JUNIT_EXT)
     androidTestImplementation(Test.AndroidTest.ESPRESSO_CORE)
