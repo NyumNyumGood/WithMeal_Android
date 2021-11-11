@@ -1,14 +1,10 @@
 package org.android.wantedhackathon.home.ui.adapter
 
-import android.app.Activity
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.android.wantedhackathon.BR
-import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.ItemHotContentBinding
 import org.android.wantedhackathon.home.data.HotContentEntity
 import org.android.wantedhackathon.util.DiffCallback

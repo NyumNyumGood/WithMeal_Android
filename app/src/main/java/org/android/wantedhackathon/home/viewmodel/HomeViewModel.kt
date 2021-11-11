@@ -7,10 +7,7 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.android.wantedhackathon.R
 import org.android.wantedhackathon.base.DisposableViewModel
-import org.android.wantedhackathon.home.data.FeedEntity
-import org.android.wantedhackathon.home.data.FollowingEntity
-import org.android.wantedhackathon.home.data.HotContentEntity
-import org.android.wantedhackathon.home.data.LocationEntity
+import org.android.wantedhackathon.home.data.*
 import org.android.wantedhackathon.util.AddressExtractor
 import javax.inject.Inject
 
@@ -39,11 +36,16 @@ class HomeViewModel @Inject constructor(
     val hotReviewList : LiveData<List<HotContentEntity>>
         get() = _hotReviewList
 
+    private val _newReviewList = MutableLiveData<List<NewContentEntity>>()
+    val newReviewList : LiveData<List<NewContentEntity>>
+        get() = _newReviewList
+
     init{
         fetchCurrentLocation()
         fetchFollowingUserList()
         fetchFeedReviewList()
         fetchHotReviewList()
+        fetchNewReviewList()
     }
 
     @SuppressLint("MissingPermission")
@@ -187,7 +189,35 @@ class HomeViewModel @Inject constructor(
         )
         _hotReviewList.value = hotReviewList
     }
-
+    private fun fetchNewReviewList() {
+        val newReviewList = listOf(
+            NewContentEntity(
+                R.drawable.updatedphoto,
+                "세겹먹는날",
+                "한식",
+                "갓성비가 내려와~ 적절한 금액대예요"
+            ),
+            NewContentEntity(
+                R.drawable.updatedphoto2,
+                "솔직하다",
+                "일식",
+                "갓성비가 내려와~ 적절한 금액대예요"
+            ),
+            NewContentEntity(
+                R.drawable.updatedphoto3,
+                "세겹먹는날",
+                "한식",
+                "갓성비가 내려와~ 적절한 금액대예요"
+            ),
+            NewContentEntity(
+                R.drawable.updatedphoto,
+                "쿠마",
+                "일식",
+                "갓성비가 내려와~ 적절한 금액대예요"
+            )
+        )
+        _newReviewList.value = newReviewList
+    }
 
 
 
