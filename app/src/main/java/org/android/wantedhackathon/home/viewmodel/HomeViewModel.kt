@@ -7,6 +7,7 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.android.wantedhackathon.R
 import org.android.wantedhackathon.base.DisposableViewModel
+import org.android.wantedhackathon.home.data.FeedEntity
 import org.android.wantedhackathon.home.data.FollowingEntity
 import org.android.wantedhackathon.home.data.LocationEntity
 import org.android.wantedhackathon.util.AddressExtractor
@@ -29,9 +30,14 @@ class HomeViewModel @Inject constructor(
     val followingUserList : LiveData<List<FollowingEntity>>
         get() = _followingUserList
 
+    private val _feedReviewList = MutableLiveData<List<FeedEntity>>()
+    val feedReviewList : LiveData<List<FeedEntity>>
+        get() = _feedReviewList
+
     init{
         fetchCurrentLocation()
         fetchFollowingUserList()
+        fetchFeedReviewList()
     }
 
     @SuppressLint("MissingPermission")
@@ -79,4 +85,36 @@ class HomeViewModel @Inject constructor(
         )
         _followingUserList.value = followingUserList
     }
+
+    private fun fetchFeedReviewList(){
+        val feedReviewList = listOf(
+            FeedEntity(
+                "멕시코즈",
+                "한식",
+                "10월 21일",
+                R.drawable.profile_img4,
+                "규니",
+                "가성비",
+                R.drawable.food_img,
+                "with 박박디라라,김징",
+                23,
+                R.string.review_content
+            ),
+            FeedEntity(
+                "멕시코즈",
+                "한식",
+                "10월 21일",
+                R.drawable.profile_img4,
+                "규니",
+                "가성비",
+                R.drawable.food_img,
+                "with 박박디라라,김징",
+                23,
+                R.string.review_content
+            )
+        )
+        _feedReviewList.value = feedReviewList
+    }
+
+
 }

@@ -50,6 +50,7 @@ dependencies {
     implementation ("com.google.android.material:material:1.4.0")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation ("androidx.constraintlayout:constraintlayout:2.1.1")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
     testImplementation(Test.JUNIT)
     androidTestImplementation(Test.AndroidTest.JUNIT_EXT)
     androidTestImplementation(Test.AndroidTest.ESPRESSO_CORE)
@@ -92,8 +93,9 @@ dependencies {
     implementation(Google.PLAY_SERVICES_LOCATION)
 
     //Naver Map
-    implementation(NaverMap.NAVER_MAP) {
-            exclude(group = "com.android.support")
-        }
+    implementation(NaverMap.NAVER_MAP) { exclude(group = "com.android.support") }
+
+    //FlexBox
+    implementation(Google.FLEX_BOX)
 
 }

@@ -7,8 +7,10 @@
             type="org.android.wantedhackathon.home.data.FeedEntity" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
+xmlns:withmeal="http://schemas.android.com/apk/res/org.android.wantedhackathon"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="36dp">
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/line_start"
         android:layout_width="match_parent"
@@ -67,6 +69,108 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_review_headline"/>
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image_profile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/profile_img4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_review_headline" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_user_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="8dp"
+        android:text="규니"
+        android:fontFamily="@font/pretendardbold"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/circle_image_profile"
+        app:layout_constraintTop_toBottomOf="@id/view_review_headline"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_review_written_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardregular"
+        android:text="10월 21일"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_image_profile"
+        app:layout_constraintStart_toStartOf="@id/textview_user_nickname"
+        app:layout_constraintTop_toBottomOf="@id/textview_user_nickname" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_modal"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_dots_icn"
+        app:layout_constraintEnd_toEndOf="@+id/checkbox_bookmark"
+        app:layout_constraintTop_toBottomOf="@id/view_review_headline" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_review_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/circle_image_profile"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager_photo_card"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:background="@drawable/food_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerview_review_tag" />
+
+    <org.android.wantedhackathon.util.SpannableTextView
+        android:id="@+id/spannable_text_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="with 박박디라라,김징"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pretendardregular"
+        withmeal:span_start="5"
+        withmeal:span_end="12"
+        app:layout_constraintTop_toBottomOf="@id/viewpager_photo_card"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/button_prefers"
+        android:layout_width="44dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="9dp"
+        android:button="@null"
+        android:drawablePadding="4dp"
+        android:paddingLeft="6dp"
+        android:text="23"
+        android:drawableLeft="@drawable/selector_prefer_checkbox"
+        android:background="@drawable/ic_heart_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewpager_photo_card"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_review_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/review_content"
+        android:fontFamily="@font/pretendardregular"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spannable_text_tag"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
