@@ -131,13 +131,55 @@ class HomeViewModel @Inject constructor(
                 2
             ),
             HotContentEntity(
-                R.drawable.rank1,
+                R.drawable.rank2,
                 "퀴헨",
                 "한식",
                 2
             ),
             HotContentEntity(
-                R.drawable.rank1,
+                R.drawable.rank3,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank4,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank5,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank6,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank7,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank8,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank9,
+                "퀴헨",
+                "한식",
+                2
+            ),
+            HotContentEntity(
+                R.drawable.rank10,
                 "퀴헨",
                 "한식",
                 2
