@@ -1,4 +1,4 @@
-package org.android.wantedhackathon
+package org.android.wantedhackathon.preference
 
 import android.content.SharedPreferences
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package org.android.wantedhackathon
+package org.android.wantedhackathon.preference
 
 class UserPreferenceManager (private val sharedPreferencesManager: SharedPreferencesManager) {
 
