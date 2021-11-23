@@ -39,6 +39,7 @@
         android:textColor="@color/black"
         android:fontFamily="@font/pretendardregular"
         android:textSize="10sp"
+        android:layout_marginTop="3dp"
         app:layout_constraintStart_toStartOf="@id/textview_visited_place_name"
         app:layout_constraintTop_toBottomOf="@id/textview_visited_place_name"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
