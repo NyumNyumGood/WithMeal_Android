@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import dagger.hilt.android.AndroidEntryPoint
+import org.android.wantedhackathon.BR
 import org.android.wantedhackathon.databinding.FragmentMapBinding
 import org.android.wantedhackathon.map.viewmodel.MapViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
@@ -36,6 +37,7 @@ class MapFragment :Fragment(), OnMapReadyCallback{
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
         requestLocationPermission.launch(REQUEST_PERMISSIONS)
+        setImageList()
     }
 
     private val requestLocationPermission =
@@ -54,6 +56,20 @@ class MapFragment :Fragment(), OnMapReadyCallback{
         map.uiSettings.isZoomControlEnabled = false
         map.uiSettings.isLocationButtonEnabled = false
         binding.locationButton.map = map
+    }
+
+    private fun setImageList(){
+        val list = ArrayList<String>()
+        list.add("https://i.ytimg.com/vi/7Xu_s1YJhyg/maxresdefault.jpg")
+        list.add("https://www.irreverentgent.com/wp-content/uploads/2018/03/Awesome-Profile-Pictures-for-Guys-look-away2.jpg")
+        list.add("https://i.ytimg.com/vi/L3wKzyIN1yk/maxresdefault.jpg")
+        list.add("https://i.ytimg.com/vi/0EnrFe3Zb6k/maxresdefault.jpg")
+
+        with(binding.imageListUser){
+            setImageCount(4,3)
+            setImageSize(30)
+            setImageList(list)
+        }
     }
 
     companion object {
