@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.mypage.ui
+package org.android.wantedhackathon.mypage.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.android.wantedhackathon.BR
 import org.android.wantedhackathon.databinding.ItemVisitPlaceBinding
-import org.android.wantedhackathon.mypage.VisitedPlaceEntity
+import org.android.wantedhackathon.mypage.data.VisitedPlaceEntity
 import org.android.wantedhackathon.util.DiffCallback
 
 class VisitPlaceAdapter() : ListAdapter<VisitedPlaceEntity, VisitPlaceAdapter.VisitPlaceViewHolder>(DiffCallback<VisitedPlaceEntity>()) {

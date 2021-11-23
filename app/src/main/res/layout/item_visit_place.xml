@@ -3,7 +3,7 @@
     <data>
         <variable
             name="data"
-            type="org.android.wantedhackathon.mypage.VisitedPlaceEntity" />
+            type="org.android.wantedhackathon.mypage.data.VisitedPlaceEntity" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
@@ -15,7 +15,8 @@
         android:id="@+id/imageview_photo"
         android:layout_width="158dp"
         android:layout_height="158dp"
-        android:background="@drawable/visitedfoodimg"
+        loadDrawable="@{data.photo}"
+        android:background="#30000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:text="세겹먹는날"
+        android:text="@{data.placeName}"
         android:fontFamily="@font/pretendardsemibold"
         android:textColor="@color/black"
         android:layout_marginTop="5dp"
@@ -34,7 +35,7 @@
         android:id="@+id/textview_visited_period"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10월 21일"
+        android:text="@{data.visitedPeriod}"
         android:textColor="@color/black"
         android:fontFamily="@font/pretendardregular"
         android:textSize="10sp"

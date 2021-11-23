@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.mypage.ui
+package org.android.wantedhackathon.mypage.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentMypageBinding
-import org.android.wantedhackathon.mypage.ContentsPagerAdapter
+import org.android.wantedhackathon.mypage.ui.adapter.ContentsPagerAdapter
 import org.android.wantedhackathon.util.AutoClearedValue
 
 @AndroidEntryPoint
