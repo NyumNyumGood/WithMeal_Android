@@ -5,13 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentVisitPlaceBinding
+import org.android.wantedhackathon.mypage.MyPageViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
 
 @AndroidEntryPoint
 class VisitPlaceFragment : Fragment() {
     private var binding by AutoClearedValue<FragmentVisitPlaceBinding>()
+    private val viewModel by viewModels<MyPageViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,5 +27,16 @@ class VisitPlaceFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.lifecycleOwner = viewLifecycleOwner
+        fetchVisitedPlaces()
+    }
+
+    private fun fetchVisitedPlaces(){
+        binding.recyclerviewVisitedPlace.run{
+            this.adapter = VisitPlaceAdapter()
+            viewModel.visitedPlaceList.observe(viewLifecycleOwner) {
+                (adapter as VisitPlaceAdapter).submitList(it)
+            }
+        }
     }
 }
