@@ -29,7 +29,6 @@
         android:fontFamily="@font/pretendardbold"
         app:layout_constraintStart_toEndOf="@id/imageview_food_photo"
         app:layout_constraintTop_toTopOf="@id/imageview_food_photo"/>
-
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textview_restaurant_category"
         android:layout_width="wrap_content"
@@ -41,7 +40,6 @@
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@+id/textview_restaurant_name"
         app:layout_constraintTop_toBottomOf="@id/textview_restaurant_name" />
-
     <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/checkbox_bookmark"
         android:layout_width="24dp"
@@ -51,15 +49,23 @@
         android:background="@drawable/selector_bookmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-
     <com.muzafferus.imagelist.ImageList
         android:id="@+id/image_list_user"
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageview_food_photo"
         app:layout_constraintStart_toStartOf="@+id/textview_restaurant_category"
         app:layout_constraintTop_toBottomOf="@id/textview_restaurant_category" />
-
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_user_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ 2"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/pretendardmedium"
+        app:layout_constraintStart_toEndOf="@id/image_list_user"
+        app:layout_constraintBottom_toBottomOf="@id/image_list_user"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
