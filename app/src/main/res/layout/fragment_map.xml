@@ -21,6 +21,15 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_search_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_storage"
         android:layout_width="106dp"
         android:layout_height="28dp"
