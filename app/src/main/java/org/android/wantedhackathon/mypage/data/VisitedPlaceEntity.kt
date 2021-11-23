@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.mypage
+package org.android.wantedhackathon.mypage.data
 
 data class VisitedPlaceEntity(
     val photo : Int,

@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.mypage.ui
+package org.android.wantedhackathon.mypage.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

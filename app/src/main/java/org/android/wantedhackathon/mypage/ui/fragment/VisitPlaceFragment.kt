@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.mypage.ui
+package org.android.wantedhackathon.mypage.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentVisitPlaceBinding
-import org.android.wantedhackathon.mypage.MyPageViewModel
+import org.android.wantedhackathon.mypage.ui.adapter.VisitPlaceAdapter
+import org.android.wantedhackathon.mypage.viewmodel.MyPageViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
 
 @AndroidEntryPoint

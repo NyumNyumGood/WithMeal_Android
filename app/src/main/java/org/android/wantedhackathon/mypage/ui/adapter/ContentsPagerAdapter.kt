@@ -1,9 +1,9 @@
-package org.android.wantedhackathon.mypage
+package org.android.wantedhackathon.mypage.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import org.android.wantedhackathon.mypage.ui.VisitPlaceFragment
-import org.android.wantedhackathon.mypage.ui.WishPlaceFragment
+import org.android.wantedhackathon.mypage.ui.fragment.VisitPlaceFragment
+import org.android.wantedhackathon.mypage.ui.fragment.WishPlaceFragment
 
 class ContentsPagerAdapter(fragment : Fragment) : FragmentStateAdapter(fragment) {
     private val tabCreators : Map<Int, ()-> Fragment> = mapOf(
