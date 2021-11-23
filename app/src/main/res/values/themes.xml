@@ -32,4 +32,8 @@
         <item name="android:textSize">13sp</item>
     </style>
 
+    <style name="Widget.MaterialComponentsMyPage.TabLayout" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/pretendardsemibold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
 </resources>
