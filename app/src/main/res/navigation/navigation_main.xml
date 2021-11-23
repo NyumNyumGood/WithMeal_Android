@@ -9,5 +9,4 @@
         android:name="org.android.wantedhackathon.frame.MainFrameFragment"
         android:label="MainFrameFragment"
         tools:layout="@layout/fragment_main_frame"/>
-
 </navigation>
