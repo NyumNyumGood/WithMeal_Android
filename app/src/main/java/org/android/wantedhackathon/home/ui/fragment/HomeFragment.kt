@@ -34,6 +34,7 @@ class HomeFragment : Fragment(){
         binding.lifecycleOwner = viewLifecycleOwner
         loadFollowing()
         setTabLayoutMediator()
+        viewModel.getToken()
     }
     private fun setTabLayoutMediator(){
         binding.viewpagerTabLayout.adapter = FeedPagerAdapter(this)

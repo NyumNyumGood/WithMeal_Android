@@ -7,11 +7,9 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.android.wantedhackathon.network.RetrofitInterface
 import org.android.wantedhackathon.preference.UserPreferenceManager
-import org.android.wantedhackathon.qualifier.AuthOkHttp
-import org.android.wantedhackathon.qualifier.AuthRetrofit
-import org.android.wantedhackathon.qualifier.UnAuthOkHttp
-import org.android.wantedhackathon.qualifier.UnAuthRetrofit
+import org.android.wantedhackathon.qualifier.*
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -84,6 +82,11 @@ object NetworkModule {
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .build()
 
+    @Provides
+    @Singleton
+    @UnAuthRetrofitService
+    fun provideRetrofitInterface(@UnAuthRetrofit retrofit: Retrofit) : RetrofitInterface =
+        retrofit.create(RetrofitInterface::class.java)
 
     private const val TOKEN_TYPE = "Authorization"
 }
