@@ -102,7 +102,7 @@ class HomeViewModel @Inject constructor(
     private fun fetchFeedReviewList(){
         val feedReviewList = listOf(
             FeedEntity(
-                "멕시코즈",
+                "세겹먹는날",
                 "한식",
                 "10월 21일",
                 R.drawable.profile_img4,
@@ -124,14 +124,14 @@ class HomeViewModel @Inject constructor(
                 R.drawable.food_img,
                 "with 박박디라라,김징",
                 23,
-                R.string.review_content
+                R.string.review_content2
             ),
             FeedEntity(
-                "멕시코즈",
+                "퀴헨",
                 "한식",
-                "10월 21일",
-                R.drawable.profile_img4,
-                "규니",
+                "10월 20일",
+                R.drawable.mypage_profile,
+                "밥밥디라라",
                 listOf(
                     TagEntity(
                         R.drawable.mood_grp,
@@ -142,9 +142,9 @@ class HomeViewModel @Inject constructor(
                         "청결"
                     )
                 ),
-                R.drawable.food_img,
-                "with 박박디라라,김징",
-                23,
+                R.drawable.feed_food2,
+                "with 박주쳐,행인",
+                16,
                 R.string.review_content
             )
         )
@@ -157,47 +157,47 @@ class HomeViewModel @Inject constructor(
                 R.drawable.rank1,
                 "퀴헨",
                 "한식",
-                2
+                16
             ),
             HotContentEntity(
                 R.drawable.rank2,
-                "퀴헨",
-                "한식",
-                2
+                "솔직하다",
+                "덮밥",
+                4
             ),
             HotContentEntity(
                 R.drawable.rank3,
-                "퀴헨",
-                "한식",
-                2
+                "아소코",
+                "일식당",
+                1
             ),
             HotContentEntity(
                 R.drawable.rank4,
-                "퀴헨",
-                "한식",
-                2
+                "라라브래드",
+                "카페/디저트",
+                10
             ),
             HotContentEntity(
                 R.drawable.rank5,
-                "퀴헨",
-                "한식",
+                "페페그라노",
+                "양식",
                 2
             ),
             HotContentEntity(
                 R.drawable.rank6,
-                "퀴헨",
+                "경복식당",
                 "한식",
                 2
             ),
             HotContentEntity(
                 R.drawable.rank7,
-                "퀴헨",
+                "화로상회",
                 "한식",
                 2
             ),
             HotContentEntity(
                 R.drawable.rank8,
-                "퀴헨",
+                "잔월",
                 "한식",
                 2
             ),
@@ -219,28 +219,28 @@ class HomeViewModel @Inject constructor(
     private fun fetchNewReviewList() {
         val newReviewList = listOf(
             NewContentEntity(
-                R.drawable.updatedphoto,
+                R.drawable.food_img1,
                 "세겹먹는날",
                 "한식",
                 "갓성비가 내려와~ 적절한 금액대예요"
             ),
             NewContentEntity(
-                R.drawable.updatedphoto,
+                R.drawable.food_img2,
                 "솔직하다",
                 "일식",
-                "갓성비가 내려와~ 적절한 금액대예요"
+                "직원 분들의 친절함에 감동이 두 배!"
             ),
             NewContentEntity(
-                R.drawable.updatedphoto,
-                "세겹먹는날",
-                "한식",
-                "갓성비가 내려와~ 적절한 금액대예요"
+                R.drawable.food_img3,
+                "버거투버거",
+                "패스트푸드",
+                "여기가 사진 맛집? 분위기가 좋아요"
             ),
             NewContentEntity(
-                R.drawable.updatedphoto,
-                "쿠마",
+                R.drawable.food_img4,
+                "휴돈정",
                 "일식",
-                "갓성비가 내려와~ 적절한 금액대예요"
+                "말잇못.. 말을 잊지 못할 맛이에요"
             )
         )
         _newReviewList.value = newReviewList

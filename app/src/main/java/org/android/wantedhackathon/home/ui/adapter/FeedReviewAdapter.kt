@@ -13,8 +13,7 @@ import org.android.wantedhackathon.util.DiffCallback
 class FeedReviewAdapter() :
     ListAdapter<FeedEntity, FeedReviewAdapter.FeedReviewViewHolder>(DiffCallback<FeedEntity>()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedReviewViewHolder {
-        val binding =
-            ItemFeedContentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemFeedContentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FeedReviewViewHolder(binding)
     }
 
