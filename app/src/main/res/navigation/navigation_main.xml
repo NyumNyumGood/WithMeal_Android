@@ -3,10 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_main"
-    app:startDestination="@id/mainFrameFragment">
+    app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/mainFrameFragment"
         android:name="org.android.wantedhackathon.frame.MainFrameFragment"
         android:label="MainFrameFragment"
         tools:layout="@layout/fragment_main_frame"/>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="org.android.wantedhackathon.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_introFragment"
+            app:destination="@id/introFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="org.android.wantedhackathon.IntroFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/fragment_intro">
+        <action
+            android:id="@+id/action_introFragment_to_mainFrameFragment"
+            app:destination="@id/mainFrameFragment" />
+    </fragment>
 </navigation>

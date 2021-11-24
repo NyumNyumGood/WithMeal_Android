@@ -19,7 +19,7 @@ class MyPageFragment: Fragment(){
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? ? =  FragmentMypageBinding.inflate(inflater, container, false)?.let {
+    ): View?=  FragmentMypageBinding.inflate(inflater, container, false)?.let {
         binding = it
         it.root
     }
