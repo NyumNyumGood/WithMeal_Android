@@ -1,4 +1,4 @@
-package org.android.wantedhackathon
+package org.android.wantedhackathon.splash
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
+import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.FragmentSplashBinding
 import org.android.wantedhackathon.util.AutoClearedValue
 import org.android.wantedhackathon.util.Extensions.applyVisibilityAnimation

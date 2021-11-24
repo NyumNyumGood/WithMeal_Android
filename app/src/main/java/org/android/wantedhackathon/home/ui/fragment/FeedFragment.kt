@@ -37,6 +37,7 @@ class FeedFragment : Fragment() {
 
     private fun fetchFeedReviews(){
         binding.recyclerviewFeed.run {
+            isNestedScrollingEnabled = false
             this.adapter = FeedReviewAdapter()
             viewmodel.feedReviewList.observe(viewLifecycleOwner){
                 (adapter as FeedReviewAdapter).submitList(it)
