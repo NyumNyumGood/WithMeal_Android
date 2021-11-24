@@ -41,7 +41,7 @@ class SplashFragment : Fragment(), CoroutineScope {
         launch {
             delay(1500)
             withContext(Dispatchers.Main){
-                findNavController().navigate(R.id.action_splashFragment_to_introFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_mainFrameFragment)
             }
         }
     }

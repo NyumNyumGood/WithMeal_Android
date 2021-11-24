@@ -36,7 +36,7 @@ class MapFragment :Fragment(), OnMapReadyCallback{
         super.onViewCreated(view, savedInstanceState)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
-        requestLocationPermission.launch(REQUEST_PERMISSIONS)
+//        requestLocationPermission.launch(REQUEST_PERMISSIONS)
         setImageList()
     }
 

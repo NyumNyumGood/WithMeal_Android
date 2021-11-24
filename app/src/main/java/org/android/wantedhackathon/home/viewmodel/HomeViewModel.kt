@@ -5,14 +5,18 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.location.FusedLocationProviderClient
 import dagger.hilt.android.lifecycle.HiltViewModel
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 import org.android.wantedhackathon.R
 import org.android.wantedhackathon.base.DisposableViewModel
 import org.android.wantedhackathon.home.data.*
+import org.android.wantedhackathon.network.TokenController
 import org.android.wantedhackathon.util.AddressExtractor
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
+    private val tokenController: TokenController,
     private val fusedLocationProviderClient: FusedLocationProviderClient,
     private val addressExtractor: AddressExtractor) :
     DisposableViewModel() {
@@ -263,5 +267,20 @@ class HomeViewModel @Inject constructor(
         )
         _tagOption.value = tagOption
     }
+
+    fun getToken(){
+        addDisposable(
+            tokenController.fetchAccessToken()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ response ->
+                    response.data.accessToken
+
+                },{
+                    it.printStackTrace()
+                })
+        )
+    }
+
 
 }
