@@ -17,6 +17,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="16dp"
         android:orientation="vertical"
+        android:nestedScrollingEnabled="false"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
