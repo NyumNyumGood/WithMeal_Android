@@ -8,6 +8,9 @@ import android.text.style.BackgroundColorSpan
 import android.util.DisplayMetrics
 import android.view.MotionEvent
 import android.view.View
+import android.view.animation.AlphaAnimation
+import android.view.animation.AnimationSet
+import android.view.animation.TranslateAnimation
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -21,6 +24,19 @@ object Extensions {
         val spannableText = text.toSpannable()
         spannableText.setSpan(BackgroundColorSpan(colorResId), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         text = spannableText
+    }
+
+    fun View.applyVisibilityAnimation(durationTime :Long): AnimationSet {
+        val animationSet = AnimationSet(true)
+        val alphaAnimation = AlphaAnimation(0f, 1f)
+        val translateAnimation = TranslateAnimation(0f, 0f, 70f,0f )
+
+        alphaAnimation.duration = durationTime
+        animationSet.duration = durationTime
+        animationSet.addAnimation(alphaAnimation)
+        animationSet.addAnimation(translateAnimation)
+        startAnimation(animationSet)
+        return animationSet
     }
 
     fun Context.showToast(text: String) {

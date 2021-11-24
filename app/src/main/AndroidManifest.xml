@@ -19,6 +19,7 @@
         android:theme="@style/Theme.WantedHackathon">
         <activity
             android:name=".frame.MainActivity"
+            android:hardwareAccelerated="false"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
