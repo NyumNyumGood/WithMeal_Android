@@ -1,175 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_setting"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/ic_setting_icn"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <View
-        android:id="@+id/view_mypage_headline"
-        android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/background_mypage_header"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_setting"/>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circle_image_user_profile"
-        android:layout_width="67dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/mypage_profile"
-        app:layout_constraintStart_toStartOf="@id/view_mypage_headline"
-        app:layout_constraintTop_toTopOf="@id/view_mypage_headline"
-        app:layout_constraintBottom_toBottomOf="@id/view_mypage_headline"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_user_nickname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pretendardsemibold"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:text="밥밥디라라"
-        android:layout_marginStart="19dp"
-        app:layout_constraintStart_toEndOf="@id/circle_image_user_profile"
-        app:layout_constraintTop_toTopOf="@id/circle_image_user_profile"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_user_university"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pretendardregular"
-        android:textSize="12sp"
-        android:textColor="@color/black"
-        android:text="서울과학기술대학교"
-        android:layout_marginTop="6dp"
-        app:layout_constraintStart_toStartOf="@id/textview_user_nickname"
-        app:layout_constraintTop_toBottomOf="@id/textview_user_nickname"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_following"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="팔로잉"
-        android:textColor="@color/black"
-        android:fontFamily="@font/pretendardmedium"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/textview_user_university"
-        app:layout_constraintBottom_toBottomOf="@id/circle_image_user_profile"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_following_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="19"
-        android:textColor="@color/black"
-        android:fontFamily="@font/pretendardsemibold"
-        android:textSize="12sp"
-        android:layout_marginStart="7dp"
-        app:layout_constraintStart_toEndOf="@id/textview_following"
-        app:layout_constraintTop_toTopOf="@id/textview_following"
-        app:layout_constraintBottom_toBottomOf="@id/circle_image_user_profile"/>
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageview_divider"
-        android:layout_width="1dp"
-        android:layout_height="9dp"
-        android:background="@color/grey5"
-        android:layout_marginStart="11dp"
-        app:layout_constraintStart_toEndOf="@id/textview_following_count"
-        app:layout_constraintTop_toTopOf="@id/textview_following_count"
-        app:layout_constraintBottom_toBottomOf="@id/textview_following_count"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_follower"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="팔로워"
-        android:textColor="@color/black"
-        android:fontFamily="@font/pretendardmedium"
-        android:textSize="12sp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/imageview_divider"
-        app:layout_constraintTop_toTopOf="@id/imageview_divider"
-        app:layout_constraintBottom_toBottomOf="@id/imageview_divider"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_follower_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="21"
-        android:textColor="@color/black"
-        android:fontFamily="@font/pretendardsemibold"
-        android:textSize="12sp"
-        android:layout_marginStart="7dp"
-        app:layout_constraintStart_toEndOf="@id/textview_follower"
-        app:layout_constraintTop_toTopOf="@id/textview_follower"
-        app:layout_constraintBottom_toBottomOf="@id/circle_image_user_profile"/>
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageview_divider_second"
-        android:layout_width="1dp"
-        android:layout_height="9dp"
-        android:background="@color/grey5"
-        android:layout_marginStart="11dp"
-        app:layout_constraintStart_toEndOf="@id/textview_follower_count"
-        app:layout_constraintTop_toTopOf="@id/textview_follower_count"
-        app:layout_constraintBottom_toBottomOf="@id/textview_follower_count"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_review"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="리뷰"
-        android:textColor="@color/black"
-        android:fontFamily="@font/pretendardmedium"
-        android:textSize="12sp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/imageview_divider_second"
-        app:layout_constraintTop_toTopOf="@id/imageview_divider_second"
-        app:layout_constraintBottom_toBottomOf="@id/imageview_divider_second"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_review_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="19"
-        android:textColor="@color/black"
-        android:fontFamily="@font/pretendardsemibold"
-        android:textSize="12sp"
-        android:layout_marginStart="7dp"
-        app:layout_constraintStart_toEndOf="@id/textview_review"
-        app:layout_constraintTop_toTopOf="@id/textview_review"
-        app:layout_constraintBottom_toBottomOf="@id/circle_image_user_profile"/>
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout_mypage"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:background="@drawable/background_tab_layout"
-        app:tabIndicator="@null"
-        app:tabSelectedTextColor="@color/black"
-        app:tabTextColor="@color/grey3"
-        app:tabGravity="fill"
-        app:tabMode="fixed"
-        android:layout_marginTop="14dp"
-        app:tabTextAppearance="@style/Widget.MaterialComponentsMyPage.TabLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_mypage_headline">
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.tabs.TabLayout>
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager_my_page"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tab_layout_mypage" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_collapseMode="parallax"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_setting"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/ic_setting_icn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_mypage_headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background_mypage_header"
+                        android:layout_marginBottom="14dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/button_setting" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_image_user_profile"
+                        android:layout_width="67dp"
+                        android:layout_height="67dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/mypage_profile"
+                        app:layout_constraintBottom_toBottomOf="@id/view_mypage_headline"
+                        app:layout_constraintStart_toStartOf="@id/view_mypage_headline"
+                        app:layout_constraintTop_toTopOf="@id/view_mypage_headline" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_user_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:fontFamily="@font/pretendardsemibold"
+                        android:text="밥밥디라라"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@id/circle_image_user_profile"
+                        app:layout_constraintTop_toTopOf="@id/circle_image_user_profile" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_user_university"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/pretendardregular"
+                        android:text="서울과학기술대학교"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/textview_user_nickname"
+                        app:layout_constraintTop_toBottomOf="@id/textview_user_nickname" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_following"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendardmedium"
+                        android:text="팔로잉"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/circle_image_user_profile"
+                        app:layout_constraintStart_toStartOf="@id/textview_user_university" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_following_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/pretendardsemibold"
+                        android:text="19"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/circle_image_user_profile"
+                        app:layout_constraintStart_toEndOf="@id/textview_following"
+                        app:layout_constraintTop_toTopOf="@id/textview_following" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageview_divider"
+                        android:layout_width="1dp"
+                        android:layout_height="9dp"
+                        android:layout_marginStart="11dp"
+                        android:background="@color/grey5"
+                        app:layout_constraintBottom_toBottomOf="@id/textview_following_count"
+                        app:layout_constraintStart_toEndOf="@id/textview_following_count"
+                        app:layout_constraintTop_toTopOf="@id/textview_following_count" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_follower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/pretendardmedium"
+                        android:text="팔로워"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview_divider"
+                        app:layout_constraintStart_toEndOf="@id/imageview_divider"
+                        app:layout_constraintTop_toTopOf="@id/imageview_divider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_follower_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/pretendardsemibold"
+                        android:text="21"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/circle_image_user_profile"
+                        app:layout_constraintStart_toEndOf="@id/textview_follower"
+                        app:layout_constraintTop_toTopOf="@id/textview_follower" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageview_divider_second"
+                        android:layout_width="1dp"
+                        android:layout_height="9dp"
+                        android:layout_marginStart="11dp"
+                        android:background="@color/grey5"
+                        app:layout_constraintBottom_toBottomOf="@id/textview_follower_count"
+                        app:layout_constraintStart_toEndOf="@id/textview_follower_count"
+                        app:layout_constraintTop_toTopOf="@id/textview_follower_count" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/pretendardmedium"
+                        android:text="리뷰"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageview_divider_second"
+                        app:layout_constraintStart_toEndOf="@id/imageview_divider_second"
+                        app:layout_constraintTop_toTopOf="@id/imageview_divider_second" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textview_review_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="@font/pretendardsemibold"
+                        android:text="19"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/circle_image_user_profile"
+                        app:layout_constraintStart_toEndOf="@id/textview_review"
+                        app:layout_constraintTop_toTopOf="@id/textview_review" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_mypage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_tab_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_mypage_headline"
+                app:tabGravity="fill"
+                app:tabIndicator="@null"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextAppearance="@style/Widget.MaterialComponentsMyPage.TabLayout"
+                app:tabTextColor="@color/grey3">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager_my_page"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tab_layout_mypage" />
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
