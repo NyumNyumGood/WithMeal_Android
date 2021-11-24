@@ -40,12 +40,17 @@ class HomeViewModel @Inject constructor(
     val newReviewList : LiveData<List<NewContentEntity>>
         get() = _newReviewList
 
+    private val _tagOption = MutableLiveData<List<TagEntity>>()
+    val tagOption : LiveData<List<TagEntity>>
+        get() = _tagOption
+
     init{
         fetchCurrentLocation()
         fetchFollowingUserList()
         fetchFeedReviewList()
         fetchHotReviewList()
         fetchNewReviewList()
+        loadTagList()
     }
 
     @SuppressLint("MissingPermission")
@@ -102,7 +107,20 @@ class HomeViewModel @Inject constructor(
                 "10월 21일",
                 R.drawable.profile_img4,
                 "규니",
-                "가성비",
+                listOf(
+                    TagEntity(
+                        R.drawable.money_grp,
+                        "가성비"
+                    ),
+                    TagEntity(
+                        R.drawable.clean_grp,
+                        "청결"
+                    ),
+                    TagEntity(
+                        R.drawable.kind_grp,
+                        "친절"
+                    )
+                ),
                 R.drawable.food_img,
                 "with 박박디라라,김징",
                 23,
@@ -114,7 +132,16 @@ class HomeViewModel @Inject constructor(
                 "10월 21일",
                 R.drawable.profile_img4,
                 "규니",
-                "가성비",
+                listOf(
+                    TagEntity(
+                        R.drawable.mood_grp,
+                        "분위기"
+                    ),
+                    TagEntity(
+                        R.drawable.taste_grp,
+                        "청결"
+                    )
+                ),
                 R.drawable.food_img,
                 "with 박박디라라,김징",
                 23,
@@ -219,6 +246,22 @@ class HomeViewModel @Inject constructor(
         _newReviewList.value = newReviewList
     }
 
-
+    private fun loadTagList(){
+        val tagOption = listOf(
+            TagEntity(
+                R.drawable.money_grp,
+                "가성비"
+            ),
+            TagEntity(
+                R.drawable.clean_grp,
+                "청결"
+            ),
+            TagEntity(
+                R.drawable.kind_grp,
+                "친절"
+            )
+        )
+        _tagOption.value = tagOption
+    }
 
 }

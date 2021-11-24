@@ -10,6 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentFeedBinding
 import org.android.wantedhackathon.home.ui.adapter.FeedReviewAdapter
 import org.android.wantedhackathon.home.ui.adapter.FollowingUserAdpater
+import org.android.wantedhackathon.home.ui.adapter.TagAdapter
 import org.android.wantedhackathon.home.viewmodel.HomeViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
 
@@ -42,4 +43,5 @@ class FeedFragment : Fragment() {
             }
         }
     }
+
 }
