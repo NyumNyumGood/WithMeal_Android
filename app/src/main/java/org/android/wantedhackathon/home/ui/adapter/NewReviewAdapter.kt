@@ -21,7 +21,6 @@ class NewReviewAdapter() :
 
     override fun onBindViewHolder(holder: NewReviewViewHolder, position: Int) {
         val item = getItem(position)
-        //TODO: REFACTOR & FIX
         val list = ArrayList<String>()
         list.add("https://i.ytimg.com/vi/7Xu_s1YJhyg/maxresdefault.jpg")
         list.add("https://www.irreverentgent.com/wp-content/uploads/2018/03/Awesome-Profile-Pictures-for-Guys-look-away2.jpg")
