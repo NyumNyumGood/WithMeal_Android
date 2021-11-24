@@ -1,5 +1,6 @@
 package org.android.wantedhackathon.home.ui.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -19,11 +20,12 @@ class FeedReviewAdapter() :
 
     override fun onBindViewHolder(holder: FeedReviewViewHolder, position: Int) {
         val item = getItem(position)
-        holder.binding.run {
-            setVariable(BR.data, item)
+        holder.binding.run { setVariable(BR.data, item) }
+        holder.binding.recyclerviewReviewTag.apply {
+            this.adapter = TagAdapter()
+            (adapter as TagAdapter).tagList = item.keyword
         }
     }
-    class FeedReviewViewHolder(val binding: ItemFeedContentBinding) :
-        RecyclerView.ViewHolder(binding.root)
+    class FeedReviewViewHolder(val binding: ItemFeedContentBinding) : RecyclerView.ViewHolder(binding.root)
 
 }

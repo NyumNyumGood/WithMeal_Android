@@ -7,10 +7,6 @@
             name="viewModel"
             type="org.android.wantedhackathon.home.viewmodel.HomeViewModel" />
     </data>
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -98,16 +94,13 @@
                 app:layout_constraintTop_toBottomOf="@id/view_headline">
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="FEED" />
+                    android:layout_height="wrap_content" />
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HOT"/>
+                    android:layout_height="wrap_content" />
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NEW"/>
+                    android:layout_height="wrap_content" />
             </com.google.android.material.tabs.TabLayout>
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpager_tab_layout"
@@ -118,5 +111,4 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tab_layout_home" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
 </layout>
