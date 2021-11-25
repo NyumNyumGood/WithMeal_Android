@@ -14,4 +14,18 @@
     <string name="review_main_ment">방문했던 식당을\n팔로워들에게 추천해보세요</string>
     <string name="signup_set_university">학교를 기반으로 팔로잉 추천과 맛집 리스트가 구성됩니다</string>
 
+    <string-array name="spinner_entrance_year">
+        <item>2021학번</item>
+        <item>2020학번</item>
+        <item>2019학번</item>
+        <item>2018학번</item>
+        <item>2017학번</item>
+        <item>2016학번</item>
+        <item>2015학번</item>
+        <item>2014학번</item>
+        <item>2013학번</item>
+        <item>2012학번</item>
+        <item>2011학번</item>
+    </string-array>
+
 </resources>
