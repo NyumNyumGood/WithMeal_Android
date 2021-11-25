@@ -15,6 +15,7 @@
     <string name="signup_set_university">학교를 기반으로 팔로잉 추천과 맛집 리스트가 구성됩니다</string>
 
     <string-array name="spinner_entrance_year">
+        <item>년도 선택 (학번)</item>
         <item>2021학번</item>
         <item>2020학번</item>
         <item>2019학번</item>
