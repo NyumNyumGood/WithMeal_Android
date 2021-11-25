@@ -12,5 +12,6 @@
     <string name="review_content2">학교 정문에서 5분 안에 갈 수 있는 음식점 중에 가장 맛있어요!\n볶음밥에 치즈 추가해서 드시면 훨씬 맛있습니다.</string>
     <string name="home_feed_with">with 박박디라라,김징</string>
     <string name="review_main_ment">방문했던 식당을\n팔로워들에게 추천해보세요</string>
+    <string name="signup_set_university">학교를 기반으로 팔로잉 추천과 맛집 리스트가 구성됩니다</string>
 
 </resources>
