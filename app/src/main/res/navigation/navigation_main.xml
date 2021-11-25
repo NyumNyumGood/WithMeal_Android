@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
-        android:name="org.android.wantedhackathon.signup.SignupFragment"
+        android:name="org.android.wantedhackathon.signup.ui.SignupFragment"
         android:label="SignupFragment"
         tools:layout="@layout/fragment_signup"/>
 

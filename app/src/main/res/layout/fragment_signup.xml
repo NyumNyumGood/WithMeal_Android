@@ -65,35 +65,20 @@
         app:layout_constraintTop_toBottomOf="@id/textview_explanation"
         app:layout_constraintStart_toStartOf="@id/textview_explanation"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintTop_toBottomOf="@id/textview_entrance"
-        app:layout_constraintStart_toStartOf="@id/textview_entrance">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edittext_entrance"
+        <Spinner
+            android:id="@+id/spinner_entrance_year"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/background_mypage_header"
+            android:background="@drawable/background_spinner_entrance"
             android:hint="년도 선택 (학번)"
             android:focusable="false"
-            android:inputType="number"
             android:textSize="12sp"
             android:textColor="@color/grey3"
-            android:fontFamily="@font/pretendardregular"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <Spinner
-        android:id="@+id/button_down"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:background="@drawable/down_icn"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintBottom_toBottomOf="@id/text_input_layout"
-        app:layout_constraintEnd_toEndOf="@+id/text_input_layout"
-        app:layout_constraintTop_toTopOf="@id/text_input_layout" />
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/pretendardregular"
+            app:layout_constraintTop_toBottomOf="@id/textview_entrance"
+            app:layout_constraintStart_toStartOf="@id/textview_entrance"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textview_university"
@@ -104,7 +89,7 @@
         android:fontFamily="@font/pretendardsemibold"
         android:textColor="@color/grey7"
         android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout"
+        app:layout_constraintTop_toBottomOf="@id/spinner_entrance_year"
         app:layout_constraintStart_toStartOf="@id/textview_explanation"/>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -112,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="6dp"
         app:layout_constraintTop_toBottomOf="@id/textview_university"
         app:layout_constraintStart_toStartOf="@id/textview_university">
         <com.google.android.material.textfield.TextInputEditText
