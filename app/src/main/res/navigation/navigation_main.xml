@@ -15,20 +15,22 @@
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/action_splashFragment_to_mainFrameFragment"
-            app:destination="@id/mainFrameFragment" />
-        <action
             android:id="@+id/action_splashFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="org.android.wantedhackathon.splash.LoginFragment"
+        android:name="org.android.wantedhackathon.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_loginFragment_to_mainFrameFragment"
-            app:destination="@id/mainFrameFragment" />
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="org.android.wantedhackathon.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup"/>
 
 </navigation>
