@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.annotation.LayoutRes
+import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.ItemEntranceSpinnerBinding
 import org.android.wantedhackathon.signup.data.EntranceSpinnerModel
 
@@ -37,7 +38,6 @@ class SpinnerAdapter(
         val model = values[position]
         try {
             binding.textviewEntranceYear.text = model.entrance
-
         } catch (e: Exception) {
             e.printStackTrace()
         }
