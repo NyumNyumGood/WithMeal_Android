@@ -85,7 +85,7 @@
             android:textColor="@color/grey3"
             android:fontFamily="@font/pretendardregular"/>
     </com.google.android.material.textfield.TextInputLayout>
-    <androidx.appcompat.widget.AppCompatImageView
+    <Spinner
         android:id="@+id/button_down"
         android:layout_width="24dp"
         android:layout_height="24dp"
