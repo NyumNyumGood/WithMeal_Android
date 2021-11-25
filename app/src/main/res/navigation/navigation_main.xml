@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="org.android.wantedhackathon.LoginFragment"
+        android:name="org.android.wantedhackathon.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
-        android:name="org.android.wantedhackathon.SignupFragment"
+        android:name="org.android.wantedhackathon.signup.SignupFragment"
         android:label="SignupFragment"
         tools:layout="@layout/fragment_signup"/>
 
