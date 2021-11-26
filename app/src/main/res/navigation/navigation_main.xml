@@ -64,6 +64,14 @@
         android:label="CompleteSignupFragment"
         tools:layout="@layout/fragment_complete_signup">
 
+        <action
+            android:id="@+id/action_completeSignupFragment_to_setNickNameFragment"
+            app:destination="@id/setNickNameFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/setNickNameFragment"
+        android:name="org.android.wantedhackathon.SetNickNameFragment"
+        android:label="SetNickNameFragment"
+        tools:layout="@layout/fragment_set_nick_name"/>
 
 </navigation>
