@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
             app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFrameFragment"
+            app:destination="@id/mainFrameFragment" />
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
@@ -50,6 +53,17 @@
         android:id="@+id/collegeCertifyFragment"
         android:name="org.android.wantedhackathon.CollegeCertifyFragment"
         android:label="CollegeCertifyFragment"
-        tools:layout="@layout/fragment_college_certify"/>
+        tools:layout="@layout/fragment_college_certify">
+        <action
+            android:id="@+id/action_collegeCertifyFragment_to_completeSignupFragment"
+            app:destination="@id/completeSignupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completeSignupFragment"
+        android:name="org.android.wantedhackathon.CompleteSignupFragment"
+        android:label="CompleteSignupFragment"
+        tools:layout="@layout/fragment_complete_signup">
+
+    </fragment>
 
 </navigation>
