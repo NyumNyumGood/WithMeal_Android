@@ -1,4 +1,4 @@
-package org.android.wantedhackathon
+package org.android.wantedhackathon.signup.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
+import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.FragmentIntroBinding
 import org.android.wantedhackathon.util.AutoClearedValue
 import kotlin.coroutines.CoroutineContext

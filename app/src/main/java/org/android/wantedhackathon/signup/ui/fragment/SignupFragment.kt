@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.signup.ui
+package org.android.wantedhackathon.signup.ui.fragment
 
 
 import android.os.Bundle
@@ -11,6 +11,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.FragmentSignupBinding
 import org.android.wantedhackathon.signup.data.EntranceSpinnerModel
+import org.android.wantedhackathon.signup.ui.adapter.SpinnerAdapter
 import org.android.wantedhackathon.util.AutoClearedValue
 
 @AndroidEntryPoint

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="211dp"
+                android:background="@color/greybg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_return"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_back_icn_3x"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_bookmark"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_bookmark_icn_3x"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:text="세겹먹는날"
+                android:fontFamily="@font/pretendardbold"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_return"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한식"
+                android:fontFamily="@font/pretendardmedium"
+                android:textSize="14sp"
+                android:textColor="@color/grey6"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@id/textview_restaurant_name"
+                app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_map_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_map_icn_3x"
+                android:layout_marginTop="13dp"
+                app:layout_constraintStart_toStartOf="@id/textview_restaurant_name"
+                app:layout_constraintTop_toBottomOf="@id/textview_restaurant_name"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서울 노원구 공릉로51길 4"
+                android:fontFamily="@font/pretendardmedium"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toEndOf="@id/imageview_map_icon"
+                app:layout_constraintTop_toTopOf="@id/imageview_map_icon"
+                app:layout_constraintBottom_toBottomOf="@id/imageview_map_icon"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/ic_call_icn_3x"
+                app:layout_constraintStart_toStartOf="@id/imageview_map_icon"
+                app:layout_constraintTop_toBottomOf="@id/imageview_map_icon"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02-972-8322"
+                android:fontFamily="@font/pretendardmedium"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toEndOf="@id/imageview_phone_icon"
+                app:layout_constraintTop_toTopOf="@id/imageview_phone_icon"
+                app:layout_constraintBottom_toBottomOf="@id/imageview_phone_icon"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_header_info"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_mypage_header"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageview_phone_icon" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_keyword_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/taste_grp2x"
+                android:layout_marginVertical="9dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageview_header_info"
+                app:layout_constraintStart_toStartOf="@id/imageview_header_info"
+                app:layout_constraintTop_toTopOf="@id/imageview_header_info" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_keyword_ment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="말잇못.. 말을 잇지 못할 맛이에요"
+                android:fontFamily="@font/pretendardregular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/imageview_keyword_icon"
+                app:layout_constraintTop_toTopOf="@id/imageview_keyword_icon"
+                app:layout_constraintBottom_toBottomOf="@id/imageview_keyword_icon"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_count_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="32명"
+                android:fontFamily="@font/pretendardsemibold"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="@id/imageview_header_info"
+                app:layout_constraintTop_toTopOf="@id/imageview_header_info"
+                app:layout_constraintBottom_toBottomOf="@id/imageview_header_info"/>
+
+            
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

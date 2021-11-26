@@ -20,6 +20,7 @@
     <color name="grey6">#999999</color>
     <color name="grey7">#575757</color>
     <color name="grey8">#2D2D2D</color>
+    <color name="greybg">#F9F9F9</color>
 
     <color name="yellow">#FFE920</color>
     <color name="pink">#EF5DA8</color>
