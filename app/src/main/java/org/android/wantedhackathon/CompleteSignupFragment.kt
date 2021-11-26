@@ -26,9 +26,14 @@ class CompleteSignupFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         popBackStack()
+        setNickName()
     }
 
     private fun popBackStack(){
         binding.buttonReturn.setOnClickListener { findNavController().popBackStack() }
+    }
+
+    private fun setNickName(){
+        binding.buttonComplete.setOnClickListener { findNavController().navigate(R.id.action_completeSignupFragment_to_setNickNameFragment) }
     }
 }

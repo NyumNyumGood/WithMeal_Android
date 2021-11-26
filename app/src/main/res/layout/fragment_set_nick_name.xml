@@ -1,8 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_return"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_back_icn_3x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardmedium"
+        android:text="가입하기"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_return"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_return" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_set_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임을 입력해주세요"
+        android:fontFamily="@font/pretendardbold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_return"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_nick_name"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/grey7"
+        android:fontFamily="@font/pretendardregular"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/textview_set_nickname"
+        app:layout_constraintTop_toBottomOf="@id/textview_set_nickname"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview_nickname"
+        android:layout_width="226dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/nicknamegraphic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_explanation" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edittext_set_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:hint="닉네임 입력"
+        android:fontFamily="@font/pretendardregular"
+        android:textSize="12sp"
+        android:paddingStart="12dp"
+        android:textColor="@color/grey3"
+        android:background="@drawable/background_mypage_header"
+        app:layout_constraintTop_toBottomOf="@id/imageview_nickname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_complete"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/button_signup_active"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:stateListAnimator="@null"
+        android:text="가입완료"
+        android:textColor="@color/white"
+        android:fontFamily="@font/pretendardbold"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/edittext_set_nickname"
+        app:layout_constraintTop_toBottomOf="@id/edittext_set_nickname"/>
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
