@@ -8,7 +8,11 @@
         android:id="@+id/mainFrameFragment"
         android:name="org.android.wantedhackathon.frame.MainFrameFragment"
         android:label="MainFrameFragment"
-        tools:layout="@layout/fragment_main_frame"/>
+        tools:layout="@layout/fragment_main_frame">
+        <action
+            android:id="@+id/action_mainFrameFragment_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="org.android.wantedhackathon.splash.SplashFragment"
@@ -73,5 +77,10 @@
         android:name="org.android.wantedhackathon.signup.ui.fragment.SetNickNameFragment"
         android:label="SetNickNameFragment"
         tools:layout="@layout/fragment_set_nick_name"/>
+    <fragment
+        android:id="@+id/restaurantDetailFragment"
+        android:name="org.android.wantedhackathon.home.ui.fragment.RestaurantDetailFragment"
+        android:label="RestaurantDetailFragment"
+        tools:layout="@layout/fragment_restaurant_detail"/>
 
 </navigation>

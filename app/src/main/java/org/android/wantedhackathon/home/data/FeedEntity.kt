@@ -2,8 +2,8 @@ package org.android.wantedhackathon.home.data
 
 
 data class FeedEntity(
-    val restaurantName: String,
-    val restaurantCategory: String,
+    val restaurantName: String?,
+    val restaurantCategory: String?,
     val currentDate: String,
     val profile: Int,
     val nickname: String,
