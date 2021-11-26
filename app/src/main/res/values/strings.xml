@@ -13,6 +13,7 @@
     <string name="home_feed_with">with 박박디라라,김징</string>
     <string name="review_main_ment">방문했던 식당을\n팔로워들에게 추천해보세요</string>
     <string name="signup_set_university">학교를 기반으로 팔로잉 추천과 맛집 리스트가 구성됩니다</string>
+    <string name="signup_certify_university">신뢰도 높은 정보 교류를 위해 인증을 진행해주세요</string>
 
     <string-array name="spinner_entrance_year">
         <item>년도 선택 (학번)</item>

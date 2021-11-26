@@ -31,6 +31,7 @@ class SignupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         showSelectEntranceSpinner()
         popBackStack()
+        startCertifyCollege()
     }
 
     private fun showSelectEntranceSpinner() {
@@ -49,7 +50,7 @@ class SignupFragment : Fragment() {
     }
 
     private fun startCertifyCollege() {
-        with(binding) { binding.buttonComplete.setOnClickListener { } }
+        with(binding) { buttonComplete.setOnClickListener { findNavController().navigate(R.id.action_signupFragment_to_collegeCertifyFragment)} }
     }
 
 }
