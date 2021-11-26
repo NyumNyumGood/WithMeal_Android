@@ -22,7 +22,7 @@ class SignupFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = FragmentSignupBinding.inflate(inflater, container, false).let{
+    ): View? = FragmentSignupBinding.inflate(inflater, container, false).let {
         binding = it
         it.root
     }
@@ -33,18 +33,23 @@ class SignupFragment : Fragment() {
         popBackStack()
     }
 
-    private fun showSelectEntranceSpinner(){
+    private fun showSelectEntranceSpinner() {
         val entrance = resources.getStringArray(R.array.spinner_entrance_year)
-        for (i in entrance.indices){
+        for (i in entrance.indices) {
             val year = EntranceSpinnerModel(entrance[i])
             listOfYear.add(year)
         }
-        spinnerAdapterYear = SpinnerAdapter(requireActivity(), R.layout.item_entrance_spinner , listOfYear)
+        spinnerAdapterYear =
+            SpinnerAdapter(requireActivity(), R.layout.item_entrance_spinner, listOfYear)
         binding.spinnerEntranceYear.adapter = spinnerAdapterYear
     }
 
-    private fun popBackStack(){
+    private fun popBackStack() {
         binding.buttonReturn.setOnClickListener { findNavController().popBackStack() }
+    }
+
+    private fun startCertifyCollege() {
+        with(binding) { binding.buttonComplete.setOnClickListener { } }
     }
 
 }
