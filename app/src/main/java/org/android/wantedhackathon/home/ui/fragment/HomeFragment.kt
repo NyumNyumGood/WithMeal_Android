@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
+import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.FragmentHomeBinding
 import org.android.wantedhackathon.home.ui.adapter.FeedPagerAdapter
 import org.android.wantedhackathon.home.ui.adapter.FollowingUserAdpater

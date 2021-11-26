@@ -10,16 +10,19 @@ import org.android.wantedhackathon.databinding.ItemFeedContentBinding
 import org.android.wantedhackathon.home.data.FeedEntity
 import org.android.wantedhackathon.util.DiffCallback
 
-class FeedReviewAdapter() :
+class FeedReviewAdapter(val listener : OnItemClickListener) :
     ListAdapter<FeedEntity, FeedReviewAdapter.FeedReviewViewHolder>(DiffCallback<FeedEntity>()) {
+    interface OnItemClickListener{
+        fun itemClick()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedReviewViewHolder {
         val binding = ItemFeedContentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FeedReviewViewHolder(binding)
     }
-
     override fun onBindViewHolder(holder: FeedReviewViewHolder, position: Int) {
         val item = getItem(position)
         holder.binding.run { setVariable(BR.data, item) }
+        holder.binding.root.setOnClickListener { listener.itemClick()}
         holder.binding.recyclerviewReviewTag.apply {
             this.adapter = TagAdapter()
             (adapter as TagAdapter).tagList = item.keyword

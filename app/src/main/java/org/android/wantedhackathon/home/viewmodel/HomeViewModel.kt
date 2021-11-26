@@ -51,6 +51,7 @@ class HomeViewModel @Inject constructor(
     init{
         fetchCurrentLocation()
         fetchFollowingUserList()
+        fetchRestaurantReviewList()
         fetchFeedReviewList()
         fetchHotReviewList()
         fetchNewReviewList()
@@ -154,6 +155,59 @@ class HomeViewModel @Inject constructor(
         )
         _feedReviewList.value = feedReviewList
     }
+
+    fun fetchRestaurantReviewList(){
+        val feedReviewList = listOf(
+            FeedEntity(
+                null,
+                null,
+                "10월 21일",
+                R.drawable.profile_img4,
+                "규니",
+                listOf(
+                    TagEntity(
+                        R.drawable.money_grp,
+                        "가성비"
+                    ),
+                    TagEntity(
+                        R.drawable.clean_grp,
+                        "청결"
+                    ),
+                    TagEntity(
+                        R.drawable.kind_grp,
+                        "친절"
+                    )
+                ),
+                R.drawable.food_imgreview,
+                "with 박박디라라,김징",
+                23,
+                R.string.review_content2
+            ),
+            FeedEntity(
+                null,
+                null,
+                "10월 21일",
+                R.drawable.mypage_profile,
+                "밥밥디라라",
+                listOf(
+                    TagEntity(
+                        R.drawable.money_grp,
+                        "가성비"
+                    ),
+                    TagEntity(
+                        R.drawable.taste_grp,
+                        "청결"
+                    )
+                ),
+                R.drawable.food_imgreview2,
+                "with 박박디라라,김징",
+                8,
+                R.string.review_content
+            )
+        )
+        _feedReviewList.value = feedReviewList
+    }
+
 
     private fun fetchHotReviewList(){
         val hotReviewList = listOf(
