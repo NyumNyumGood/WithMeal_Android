@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
-        android:name="org.android.wantedhackathon.signup.ui.SignupFragment"
+        android:name="org.android.wantedhackathon.signup.ui.fragment.SignupFragment"
         android:label="SignupFragment"
         tools:layout="@layout/fragment_signup">
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/introFragment"
-        android:name="org.android.wantedhackathon.IntroFragment"
+        android:name="org.android.wantedhackathon.signup.ui.fragment.IntroFragment"
         android:label="IntroFragment"
         tools:layout="@layout/fragment_intro">
         <action
@@ -51,7 +51,7 @@
     </fragment>
     <fragment
         android:id="@+id/collegeCertifyFragment"
-        android:name="org.android.wantedhackathon.CollegeCertifyFragment"
+        android:name="org.android.wantedhackathon.signup.ui.fragment.CollegeCertifyFragment"
         android:label="CollegeCertifyFragment"
         tools:layout="@layout/fragment_college_certify">
         <action
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/completeSignupFragment"
-        android:name="org.android.wantedhackathon.CompleteSignupFragment"
+        android:name="org.android.wantedhackathon.signup.ui.fragment.CompleteSignupFragment"
         android:label="CompleteSignupFragment"
         tools:layout="@layout/fragment_complete_signup">
 
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/setNickNameFragment"
-        android:name="org.android.wantedhackathon.SetNickNameFragment"
+        android:name="org.android.wantedhackathon.signup.ui.fragment.SetNickNameFragment"
         android:label="SetNickNameFragment"
         tools:layout="@layout/fragment_set_nick_name"/>
 
