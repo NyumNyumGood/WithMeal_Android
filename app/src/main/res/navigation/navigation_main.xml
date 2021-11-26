@@ -32,7 +32,11 @@
         android:id="@+id/signupFragment"
         android:name="org.android.wantedhackathon.signup.ui.SignupFragment"
         android:label="SignupFragment"
-        tools:layout="@layout/fragment_signup"/>
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_collegeCertifyFragment"
+            app:destination="@id/collegeCertifyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/introFragment"
         android:name="org.android.wantedhackathon.IntroFragment"
@@ -42,5 +46,10 @@
             android:id="@+id/action_introFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/collegeCertifyFragment"
+        android:name="org.android.wantedhackathon.CollegeCertifyFragment"
+        android:label="CollegeCertifyFragment"
+        tools:layout="@layout/fragment_college_certify"/>
 
 </navigation>
