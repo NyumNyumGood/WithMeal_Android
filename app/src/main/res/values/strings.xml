@@ -17,6 +17,7 @@
     <string name="set_nick_name">마이페이지에서 변경 가능합니다</string>
     <string name="user_count">+ %d</string>
     <string name="new_user_count">+ %d</string>
+    <string name="wish_user_count">+ %d</string>
 
     <string-array name="spinner_entrance_year">
         <item>년도 선택 (학번)</item>

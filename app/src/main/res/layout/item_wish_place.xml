@@ -68,7 +68,7 @@
             android:id="@+id/textview_user_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+ 2"
+            android:text="@{@string/wish_user_count(data.count)}"
             android:textSize="12sp"
             android:textColor="@color/black"
             android:fontFamily="@font/pretendardmedium"

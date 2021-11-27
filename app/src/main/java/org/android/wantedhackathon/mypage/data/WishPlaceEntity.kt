@@ -4,5 +4,6 @@ data class WishPlaceEntity(
     val photo: Int,
     val name: String,
     val category: String,
-    val comment: String
+    val comment: String,
+    val count : Int
 )
