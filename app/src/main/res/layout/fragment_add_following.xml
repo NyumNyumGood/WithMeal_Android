@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_return"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/ic_back_icn_3x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_add_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="팔로잉 추가"
+                android:fontFamily="@font/pretendardmedium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/button_return"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button_return" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edittext_following_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="16dp"
+                android:hint="친구의 닉네임을 검색해보세요"
+                android:textColor="@color/grey3"
+                android:fontFamily="@font/pretendardregular"
+                android:textSize="14sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="8dp"
+                android:drawableRight="@drawable/ic_search_icn_3x"
+                android:background="@drawable/background_mypage_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_return"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_following_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="서울대학교 지인 추천"
+                android:fontFamily="@font/pretendardsemibold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/edittext_following_nickname"
+                app:layout_constraintStart_toStartOf="@id/edittext_following_nickname"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_recommend_following"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_recommend_following"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview_following_recommend"/>
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview_recommend_following" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
