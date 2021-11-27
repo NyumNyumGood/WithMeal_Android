@@ -46,7 +46,7 @@
                     android:layout_height="24dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="100dp"
-                    android:background="@drawable/ic_search_icn_3x"
+                    android:background="@drawable/ic_main_search"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

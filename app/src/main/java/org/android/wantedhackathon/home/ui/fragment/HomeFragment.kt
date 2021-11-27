@@ -36,6 +36,7 @@ class HomeFragment : Fragment(){
         binding.lifecycleOwner = viewLifecycleOwner
         loadFollowing()
         setTabLayoutMediator()
+        addFollowing()
         viewModel.getToken()
     }
     private fun setTabLayoutMediator(){
@@ -54,11 +55,14 @@ class HomeFragment : Fragment(){
                 override fun itemClick() {
                     findNavController().navigate(R.id.action_mainFrameFragment_to_followingDetailFragment)
                 }
-
             })
             viewModel.followingUserList.observe(viewLifecycleOwner){
                 (adapter as FollowingUserAdpater).submitList(it)
             }
         }
     }
+    private fun addFollowing(){
+        with(binding) {buttonPlusFriend.setOnClickListener { findNavController().navigate(R.id.action_mainFrameFragment_to_addFollowingFragment) }}
+    }
+
 }

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="org.android.wantedhackathon.home.data.AddFollowingEntity" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="18dp">
-
         <View
             android:id="@+id/view_divider"
             android:layout_width="match_parent"
@@ -21,7 +25,7 @@
             android:layout_height="36dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="18dp"
-            android:background="@drawable/follow1"
+            loadDrawable="@{data.image}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/view_divider" />
 
@@ -31,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/pretendardsemibold"
-            android:text="밥묵쟈"
+            android:text="@{data.id}"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@id/circleimage_following"
@@ -42,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardregular"
-            android:text="밥밥디라라님 외 8명이 팔로우합니다"
+            android:text="@{data.otherFollowers}"
             android:textColor="@color/grey10"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="@id/circleimage_following"
@@ -55,7 +59,7 @@
             android:layout_height="24dp"
             android:layout_marginTop="26dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/follow"
+            loadDrawable="@{data.case}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/view_divider" />
 
@@ -64,7 +68,7 @@
             android:layout_width="180dp"
             android:layout_height="112dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/intersect1"
+            loadDrawable="@{data.cardOne}"
             app:layout_constraintEnd_toStartOf="@+id/photo_card_second"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +78,7 @@
             android:id="@+id/textview_restaurant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="솔직히다"
+            android:text="@{data.nameOne}"
             android:fontFamily="@font/pretendardsemibold"
             android:textColor="@color/black"
             android:textSize="12sp"
@@ -86,7 +90,7 @@
             android:id="@+id/textview_restaurant_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="덮밥"
+            android:text="@{data.categoryOne}"
             android:fontFamily="@font/pretendardmedium"
             android:textSize="10sp"
             android:textColor="@color/grey6"
@@ -98,7 +102,7 @@
             android:id="@+id/photo_card_second"
             android:layout_width="180dp"
             android:layout_height="112dp"
-            android:background="@drawable/intersect2"
+            loadDrawable="@{data.cardTwo}"
             app:layout_constraintBottom_toBottomOf="@+id/photo_card_first"
             app:layout_constraintEnd_toEndOf="@id/imageview_case"
             app:layout_constraintHorizontal_bias="0.5" />
@@ -107,7 +111,7 @@
             android:id="@+id/textview_restaurant_name_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="가원양꼬치"
+            android:text="@{data.nameTwo}"
             android:fontFamily="@font/pretendardsemibold"
             android:textColor="@color/black"
             android:textSize="12sp"
@@ -119,7 +123,7 @@
             android:id="@+id/textview_restaurant_category_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="양꼬치"
+            android:text="@{data.categoryTwo}"
             android:fontFamily="@font/pretendardmedium"
             android:textSize="10sp"
             android:textColor="@color/grey6"
