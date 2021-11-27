@@ -37,6 +37,20 @@
         <item>2011학번</item>
     </string-array>
 
+    <string-array name="spinner_select_university">
+        <item>학교 이름을 검색하세요</item>
+        <item>건국대학교</item>
+        <item>경희대학교</item>
+        <item>고려대학교</item>
+        <item>광운대학교</item>
+        <item>서울대학교</item>
+        <item>서울시립대학교</item>
+        <item>성균관대학교</item>
+        <item>중앙대학교</item>
+        <item>한양대학교</item>
+        <item>홍익대학교</item>
+    </string-array>
+
     <string name="taste_grp">말잇못.. 말을 잇지 못할 맛이에요</string>
     <string name="kind_grp">직원 분들의 친절함에 감동이 두 배!</string>
     <string name="money_grp">갓성비가 내려와~ 적절한 금액대예요</string>
