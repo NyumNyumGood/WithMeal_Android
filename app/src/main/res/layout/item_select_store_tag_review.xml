@@ -5,7 +5,7 @@
     <data>
         <variable
             name="tagInfo"
-            type="org.android.wantedhackathon.review.TagInfoEntity" />
+            type="org.android.wantedhackathon.review.entity.TagInfoEntity" />
         <import type="androidx.core.content.ContextCompat"/>
     </data>
 
@@ -21,8 +21,8 @@
             android:layout_height="wrap_content"
             android:textSize="14dp"
             android:button="@null"
-            android:paddingHorizontal="35dp"
-            android:drawablePadding="15dp"
+            android:paddingHorizontal="26dp"
+            android:drawablePadding="8dp"
             android:fontFamily="@font/pretendardbold"
             android:drawableLeft="@{ContextCompat.getDrawable(context, tagInfo.image)}"
             android:text="@{tagInfo.description}"
@@ -33,7 +33,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="가게 태그 고르는 거임"
+            tools:text="위드밀 태그"
             tools:drawableLeft="@drawable/money_grp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.review
+package org.android.wantedhackathon.review.entity
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

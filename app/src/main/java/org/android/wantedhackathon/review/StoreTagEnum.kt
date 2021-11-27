@@ -1,4 +1,6 @@
-package org.android.wantedhackathon
+package org.android.wantedhackathon.review
+
+import org.android.wantedhackathon.R
 
 enum class StoreTagEnum(val tag: String, val image: Int, val description: Int) {
     TASTE("맛", R.drawable.taste_grp, R.string.taste_grp),

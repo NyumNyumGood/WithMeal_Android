@@ -1,12 +1,13 @@
-package org.android.wantedhackathon.review
+package org.android.wantedhackathon.review.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 import org.android.wantedhackathon.BR
-import org.android.wantedhackathon.StoreTagEnum
+import org.android.wantedhackathon.review.StoreTagEnum
 import org.android.wantedhackathon.databinding.ItemSelectStoreTagReviewBinding
+import org.android.wantedhackathon.review.entity.TagInfoEntity
 
 class TagDescriptionListAdapter(private val listener: (TagInfoEntity) -> Unit ): RecyclerView.Adapter<TagDescriptionListAdapter.TagDescriptionListViewHolder>() {
     var tags = StoreTagEnum.values().map { TagInfoEntity(it.tag, it.image, it.description) }

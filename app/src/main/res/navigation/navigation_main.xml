@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_main"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/mainFrameFragment">
     <fragment
         android:id="@+id/mainFrameFragment"
         android:name="org.android.wantedhackathon.frame.MainFrameFragment"
@@ -107,7 +107,7 @@
         tools:layout="@layout/fragment_add_following"/>
     <fragment
         android:id="@+id/writeReviewFragment"
-        android:name="org.android.wantedhackathon.review.WriteReviewFragment"
+        android:name="org.android.wantedhackathon.review.ui.WriteReviewFragment"
         android:label="WriteReviewFragment"
         tools:layout="@layout/fragment_write_review">
 

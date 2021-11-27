@@ -135,7 +135,7 @@ class HomeViewModel @Inject constructor(
                 "퀴헨",
                 "한식",
                 "10월 20일",
-                R.drawable.mypage_profile,
+                R.drawable.profile_img,
                 "밥밥디라라",
                 listOf(
                     TagEntity(
@@ -151,6 +151,52 @@ class HomeViewModel @Inject constructor(
                 "with 박주쳐,행인",
                 16,
                 R.string.review_content
+            ),
+            FeedEntity(
+                "솔직하다",
+                "덮밥",
+                "10월 20일",
+                R.drawable.profile_img5,
+                "메가공",
+                listOf(
+                    TagEntity(
+                        R.drawable.money_grp,
+                        "가성비"
+                    ),
+                    TagEntity(
+                        R.drawable.kind_grp,
+                        "친절"
+                    )
+                ),
+                R.drawable.img05,
+                "with 맛도리,밥묵쟈",
+                32,
+                R.string.review_content3
+            ),
+            FeedEntity(
+                "경복식당",
+                "한식",
+                "10월 18일",
+                R.drawable.profile_img4,
+                "규니",
+                listOf(
+                    TagEntity(
+                        R.drawable.money_grp,
+                        "가성비"
+                    ),
+                    TagEntity(
+                        R.drawable.clean_grp,
+                        "청결"
+                    ),
+                    TagEntity(
+                        R.drawable.kind_grp,
+                        "친절"
+                    )
+                ),
+                R.drawable.img06,
+                "with 박주쳐,도치피치",
+                11,
+                R.string.review_content4
             )
         )
         _feedReviewList.value = feedReviewList
