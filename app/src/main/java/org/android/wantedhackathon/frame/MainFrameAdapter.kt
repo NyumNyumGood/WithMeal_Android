@@ -5,7 +5,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import org.android.wantedhackathon.home.ui.fragment.HomeFragment
 import org.android.wantedhackathon.map.ui.MapFragment
 import org.android.wantedhackathon.mypage.ui.fragment.MyPageFragment
-import org.android.wantedhackathon.review.ReviewFragment
+import org.android.wantedhackathon.review.ui.ReviewFragment
 
 class MainFrameAdapter(fragment : Fragment) : FragmentStateAdapter(fragment){
     override fun getItemCount() = 4

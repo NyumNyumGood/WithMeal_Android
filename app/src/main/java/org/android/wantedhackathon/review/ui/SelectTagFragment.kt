@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.review
+package org.android.wantedhackathon.review.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentSelectTagBinding
+import org.android.wantedhackathon.review.viewmodel.ReviewViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
 
 @AndroidEntryPoint

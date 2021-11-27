@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.review
+package org.android.wantedhackathon.review.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,6 +16,9 @@ import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.FragmentWriteReviewBinding
 import org.android.wantedhackathon.home.data.TagEntity
 import org.android.wantedhackathon.home.ui.adapter.TagAdapter
+import org.android.wantedhackathon.review.viewmodel.ReviewViewModel
+import org.android.wantedhackathon.review.entity.TagInfoEntity
+import org.android.wantedhackathon.review.UploadPicturesViewPagerAdapter
 import org.android.wantedhackathon.util.AutoClearedValue
 import java.lang.RuntimeException
 

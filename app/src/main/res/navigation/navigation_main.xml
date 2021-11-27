@@ -107,7 +107,7 @@
         tools:layout="@layout/fragment_add_following"/>
     <fragment
         android:id="@+id/writeReviewFragment"
-        android:name="org.android.wantedhackathon.review.WriteReviewFragment"
+        android:name="org.android.wantedhackathon.review.ui.WriteReviewFragment"
         android:label="WriteReviewFragment"
         tools:layout="@layout/fragment_write_review">
 

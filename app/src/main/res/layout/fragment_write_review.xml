@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="org.android.wantedhackathon.review.ReviewViewModel" />
+            type="org.android.wantedhackathon.review.viewmodel.ReviewViewModel" />
     </data>
     <androidx.core.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"

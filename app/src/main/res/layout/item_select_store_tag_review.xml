@@ -5,7 +5,7 @@
     <data>
         <variable
             name="tagInfo"
-            type="org.android.wantedhackathon.review.TagInfoEntity" />
+            type="org.android.wantedhackathon.review.entity.TagInfoEntity" />
         <import type="androidx.core.content.ContextCompat"/>
     </data>
 

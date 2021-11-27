@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.review
+package org.android.wantedhackathon.review.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,10 +1,11 @@
-package org.android.wantedhackathon.review
+package org.android.wantedhackathon.review.viewmodel
 
 import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.android.wantedhackathon.base.DisposableViewModel
+import org.android.wantedhackathon.review.entity.TagInfoEntity
 import javax.inject.Inject
 
 @HiltViewModel

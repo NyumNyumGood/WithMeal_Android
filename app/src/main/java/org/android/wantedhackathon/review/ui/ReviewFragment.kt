@@ -1,19 +1,13 @@
-package org.android.wantedhackathon.review
+package org.android.wantedhackathon.review.ui
 
-import android.Manifest
-import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -21,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentReviewBinding
 import org.android.wantedhackathon.frame.MainFrameFragmentDirections
+import org.android.wantedhackathon.review.viewmodel.ReviewViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
 import java.io.File
 
