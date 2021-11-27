@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
             name="data"
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="18dp">
+
         <View
             android:id="@+id/view_divider"
             android:layout_width="match_parent"
@@ -21,13 +23,14 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleimage_following"
+            loadDrawable="@{data.image}"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="18dp"
-            loadDrawable="@{data.image}"
+            android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_divider" />
+            app:layout_constraintTop_toBottomOf="@id/view_divider"
+            tools:background="@drawable/follow1" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_id"
@@ -55,81 +58,88 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageview_case"
+            loadDrawable="@{data.case}"
             android:layout_width="44dp"
             android:layout_height="24dp"
             android:layout_marginTop="26dp"
             android:layout_marginEnd="16dp"
-            loadDrawable="@{data.case}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_divider" />
+            app:layout_constraintTop_toBottomOf="@id/view_divider"
+            tools:background="@drawable/follow" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/photo_card_first"
-            android:layout_width="180dp"
+            loadDrawable="@{data.cardOne}"
+            android:layout_width="0dp"
             android:layout_height="112dp"
             android:layout_marginTop="12dp"
-            loadDrawable="@{data.cardOne}"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toStartOf="@+id/photo_card_second"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/circleimage_following"
             app:layout_constraintTop_toBottomOf="@id/circleimage_following" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/photo_card_second"
+            loadDrawable="@{data.cardTwo}"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_card_first"
+            app:layout_constraintEnd_toEndOf="@+id/imageview_case"
+            app:layout_constraintStart_toEndOf="@+id/photo_card_first"
+            app:layout_constraintTop_toTopOf="@+id/photo_card_first"
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_restaurant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.nameOne}"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/pretendardsemibold"
+            android:text="@{data.nameOne}"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:layout_marginTop="3dp"
             app:layout_constraintStart_toStartOf="@id/photo_card_first"
-            app:layout_constraintTop_toBottomOf="@id/photo_card_first"/>
+            app:layout_constraintTop_toBottomOf="@id/photo_card_first"
+            tools:text="2321312312" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_restaurant_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.categoryOne}"
-            android:fontFamily="@font/pretendardmedium"
-            android:textSize="10sp"
-            android:textColor="@color/grey6"
             android:layout_marginStart="6dp"
-            app:layout_constraintStart_toEndOf="@id/textview_restaurant_name"
-            app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/photo_card_second"
-            android:layout_width="180dp"
-            android:layout_height="112dp"
-            loadDrawable="@{data.cardTwo}"
-            app:layout_constraintBottom_toBottomOf="@+id/photo_card_first"
-            app:layout_constraintEnd_toEndOf="@id/imageview_case"
-            app:layout_constraintHorizontal_bias="0.5" />
+            android:fontFamily="@font/pretendardmedium"
+            android:text="@{data.categoryOne}"
+            android:textColor="@color/grey6"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name"
+            app:layout_constraintStart_toEndOf="@+id/textview_restaurant_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_restaurant_name_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.nameTwo}"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/pretendardsemibold"
+            android:text="@{data.nameTwo}"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:layout_marginTop="3dp"
             app:layout_constraintStart_toStartOf="@id/photo_card_second"
-            app:layout_constraintTop_toBottomOf="@id/photo_card_second"/>
+            app:layout_constraintTop_toBottomOf="@id/photo_card_second" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_restaurant_category_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.categoryTwo}"
-            android:fontFamily="@font/pretendardmedium"
-            android:textSize="10sp"
-            android:textColor="@color/grey6"
             android:layout_marginStart="6dp"
-            app:layout_constraintStart_toEndOf="@id/textview_restaurant_name_second"
-            app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name_second"/>
+            android:fontFamily="@font/pretendardmedium"
+            android:text="@{data.categoryTwo}"
+            android:textColor="@color/grey6"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name_second"
+            app:layout_constraintStart_toEndOf="@id/textview_restaurant_name_second" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
