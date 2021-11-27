@@ -107,7 +107,7 @@ class HomeViewModel @Inject constructor(
     private fun fetchFeedReviewList(){
         val feedReviewList = listOf(
             FeedEntity(
-                "세겹먹는날",
+                "멕시코즈",
                 "한식",
                 "10월 21일",
                 R.drawable.profile_img4,
@@ -144,7 +144,7 @@ class HomeViewModel @Inject constructor(
                     ),
                     TagEntity(
                         R.drawable.taste_grp,
-                        "청결"
+                        "맛"
                     )
                 ),
                 R.drawable.feed_food2,
@@ -245,29 +245,29 @@ class HomeViewModel @Inject constructor(
                 R.drawable.rank6,
                 "경복식당",
                 "한식",
-                2
+                5
             ),
             HotContentEntity(
                 R.drawable.rank7,
                 "화로상회",
                 "한식",
-                2
+                1
             ),
             HotContentEntity(
                 R.drawable.rank8,
                 "잔월",
                 "한식",
-                2
+                3
             ),
             HotContentEntity(
-                R.drawable.rank9,
-                "퀴헨",
-                "한식",
-                2
+                R.drawable.group9,
+                "사잇길",
+                "양식",
+                7
             ),
             HotContentEntity(
-                R.drawable.rank10,
-                "퀴헨",
+                R.drawable.group10,
+                "세겹먹는날",
                 "한식",
                 2
             )
@@ -280,25 +280,29 @@ class HomeViewModel @Inject constructor(
                 R.drawable.food_img1,
                 "세겹먹는날",
                 "한식",
-                "갓성비가 내려와~ 적절한 금액대예요"
+                "갓성비가 내려와~ 적절한 금액대예요",
+                2
             ),
             NewContentEntity(
                 R.drawable.food_img2,
                 "솔직하다",
                 "일식",
-                "직원 분들의 친절함에 감동이 두 배!"
+                "직원 분들의 친절함에 감동이 두 배!",
+                8
             ),
             NewContentEntity(
                 R.drawable.food_img3,
                 "버거투버거",
                 "패스트푸드",
-                "여기가 사진 맛집? 분위기가 좋아요"
+                "여기가 사진 맛집? 분위기가 좋아요",
+                4
             ),
             NewContentEntity(
                 R.drawable.food_img4,
                 "휴돈정",
                 "일식",
-                "말잇못.. 말을 잊지 못할 맛이에요"
+                "말잇못.. 말을 잊지 못할 맛이에요",
+                2
             )
         )
         _newReviewList.value = newReviewList

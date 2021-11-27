@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">위드밀</string>
-    <string name="user_nickname">박시원</string>
-    <string name="user_university">서울과학기술대학교</string>
+    <string name="user_nickname">맛난이</string>
+    <string name="user_university">서울대학교</string>
     <string name="following_nickname">밥밥디라라</string>
     <string name="following_nickname2">행인</string>
     <string name="following_nickname3">박주쳐</string>
@@ -15,6 +15,9 @@
     <string name="signup_set_university">학교를 기반으로 팔로잉 추천과 맛집 리스트가 구성됩니다</string>
     <string name="signup_certify_university">신뢰도 높은 정보 교류를 위해 인증을 진행해주세요</string>
     <string name="set_nick_name">마이페이지에서 변경 가능합니다</string>
+    <string name="user_count">+ %d</string>
+    <string name="new_user_count">+ %d</string>
+    <string name="wish_user_count">+ %d</string>
 
     <string-array name="spinner_entrance_year">
         <item>년도 선택 (학번)</item>

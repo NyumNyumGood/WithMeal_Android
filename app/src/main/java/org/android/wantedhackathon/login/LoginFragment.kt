@@ -26,12 +26,13 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        startSignUp()
+        setNavController()
     }
 
-    private fun startSignUp(){
+    private fun setNavController(){
         with(binding){
             textviewSignup.setOnClickListener { findNavController().navigate(R.id.action_loginFragment_to_signupFragment) }
+            buttonLogin.setOnClickListener { findNavController().navigate(R.id.action_loginFragment_to_mainFrameFragment) }
         }
     }
 
