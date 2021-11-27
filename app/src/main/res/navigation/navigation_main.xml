@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_mainFrameFragment_to_addFollowingFragment"
             app:destination="@id/addFollowingFragment" />
+        <action
+            android:id="@+id/action_mainFrameFragment_to_writeReviewFragment"
+            app:destination="@id/writeReviewFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -102,5 +105,15 @@
         android:name="org.android.wantedhackathon.home.ui.fragment.AddFollowingFragment"
         android:label="AddFollowingFragment"
         tools:layout="@layout/fragment_add_following"/>
+    <fragment
+        android:id="@+id/writeReviewFragment"
+        android:name="org.android.wantedhackathon.review.WriteReviewFragment"
+        android:label="WriteReviewFragment"
+        tools:layout="@layout/fragment_write_review">
+
+        <argument
+            android:name="pictures"
+            app:argType="string[]" />
+    </fragment>
 
 </navigation>

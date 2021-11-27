@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_select_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_tag_description"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_select_restaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendardregular"
+                android:text="식당을 선택해주세요"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_must"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(필수)"
+                android:textSize="14dp"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pretendardlight"
+                app:layout_constraintTop_toTopOf="@id/textview_select_restaurant"
+                app:layout_constraintStart_toEndOf="@id/textview_select_restaurant" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendardmedium"
+                android:includeFontPadding="false"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_must"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textview_select_restaurant" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edittext_review"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:textSize="13dp"
+            android:paddingStart="12dp"
+            android:hint="@string/write_review_to_friends"
+            app:layout_constraintDimensionRatio="1:0.426"
+            app:layout_constraintTop_toBottomOf="@id/constraintlayout_select_restaurant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_select_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="11dp"
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_signup_unactive"
+            app:layout_constraintTop_toBottomOf="@id/edittext_review"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_select_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendardregular"
+                android:text="식당을 선택해주세요"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_must_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(필수)"
+                android:textSize="12dp"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pretendardlight"
+                app:layout_constraintTop_toTopOf="@id/textview_select_friends"
+                app:layout_constraintStart_toEndOf="@id/textview_select_friends" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_plus_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendardmedium"
+                android:includeFontPadding="false"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_must_second"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textview_must_second" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
