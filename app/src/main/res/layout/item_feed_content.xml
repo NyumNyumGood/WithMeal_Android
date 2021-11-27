@@ -139,6 +139,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recyclerview_review_tag" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#33181818"
+        app:layout_constraintStart_toStartOf="@id/viewpager_photo_card"
+        app:layout_constraintTop_toTopOf="@id/viewpager_photo_card"
+        app:layout_constraintBottom_toBottomOf="@id/viewpager_photo_card"/>
 
     <org.android.wantedhackathon.util.SpannableTextView
         android:id="@+id/spannable_text_tag"
@@ -160,7 +167,7 @@
         android:button="@null"
         android:drawablePadding="4dp"
         android:paddingStart="6dp"
-        android:text="23"
+        android:text="@{Integer.toString(data.prefers)}"
         android:drawableStart="@drawable/selector_prefer_checkbox"
         android:background="@drawable/background_mypage_header"
         app:layout_constraintEnd_toEndOf="parent"
