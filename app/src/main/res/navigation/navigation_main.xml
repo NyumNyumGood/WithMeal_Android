@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_mainFrameFragment_to_followingDetailFragment"
             app:destination="@id/followingDetailFragment" />
+        <action
+            android:id="@+id/action_mainFrameFragment_to_addFollowingFragment"
+            app:destination="@id/addFollowingFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -94,5 +97,10 @@
         android:name="org.android.wantedhackathon.home.ui.fragment.FollowingDetailFragment"
         android:label="FollowingDetailFragment"
         tools:layout="@layout/fragment_following_detail"/>
+    <fragment
+        android:id="@+id/addFollowingFragment"
+        android:name="org.android.wantedhackathon.home.ui.fragment.AddFollowingFragment"
+        android:label="AddFollowingFragment"
+        tools:layout="@layout/fragment_add_following"/>
 
 </navigation>

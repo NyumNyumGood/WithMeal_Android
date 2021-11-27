@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="data"
+            type="org.android.wantedhackathon.home.data.AddFollowingEntity" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,13 +23,14 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleimage_following"
+            loadDrawable="@{data.image}"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="18dp"
-            android:background="@drawable/follow1"
+            android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_divider" />
+            app:layout_constraintTop_toBottomOf="@id/view_divider"
+            tools:background="@drawable/follow1" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_id"
@@ -31,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/pretendardsemibold"
-            android:text="밥묵쟈"
+            android:text="@{data.id}"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@id/circleimage_following"
@@ -42,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardregular"
-            android:text="밥밥디라라님 외 8명이 팔로우합니다"
+            android:text="@{data.otherFollowers}"
             android:textColor="@color/grey10"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="@id/circleimage_following"
@@ -51,81 +58,88 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageview_case"
+            loadDrawable="@{data.case}"
             android:layout_width="44dp"
             android:layout_height="24dp"
             android:layout_marginTop="26dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/follow"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_divider" />
+            app:layout_constraintTop_toBottomOf="@id/view_divider"
+            tools:background="@drawable/follow" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/photo_card_first"
-            android:layout_width="180dp"
+            loadDrawable="@{data.cardOne}"
+            android:layout_width="0dp"
             android:layout_height="112dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/intersect1"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toStartOf="@+id/photo_card_second"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/circleimage_following"
             app:layout_constraintTop_toBottomOf="@id/circleimage_following" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/photo_card_second"
+            loadDrawable="@{data.cardTwo}"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_card_first"
+            app:layout_constraintEnd_toEndOf="@+id/imageview_case"
+            app:layout_constraintStart_toEndOf="@+id/photo_card_first"
+            app:layout_constraintTop_toTopOf="@+id/photo_card_first"
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_restaurant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="솔직히다"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/pretendardsemibold"
+            android:text="@{data.nameOne}"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:layout_marginTop="3dp"
             app:layout_constraintStart_toStartOf="@id/photo_card_first"
-            app:layout_constraintTop_toBottomOf="@id/photo_card_first"/>
+            app:layout_constraintTop_toBottomOf="@id/photo_card_first"
+            tools:text="2321312312" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_restaurant_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="덮밥"
-            android:fontFamily="@font/pretendardmedium"
-            android:textSize="10sp"
-            android:textColor="@color/grey6"
             android:layout_marginStart="6dp"
-            app:layout_constraintStart_toEndOf="@id/textview_restaurant_name"
-            app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/photo_card_second"
-            android:layout_width="180dp"
-            android:layout_height="112dp"
-            android:background="@drawable/intersect2"
-            app:layout_constraintBottom_toBottomOf="@+id/photo_card_first"
-            app:layout_constraintEnd_toEndOf="@id/imageview_case"
-            app:layout_constraintHorizontal_bias="0.5" />
+            android:fontFamily="@font/pretendardmedium"
+            android:text="@{data.categoryOne}"
+            android:textColor="@color/grey6"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name"
+            app:layout_constraintStart_toEndOf="@+id/textview_restaurant_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_restaurant_name_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="가원양꼬치"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/pretendardsemibold"
+            android:text="@{data.nameTwo}"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:layout_marginTop="3dp"
             app:layout_constraintStart_toStartOf="@id/photo_card_second"
-            app:layout_constraintTop_toBottomOf="@id/photo_card_second"/>
+            app:layout_constraintTop_toBottomOf="@id/photo_card_second" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_restaurant_category_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="양꼬치"
-            android:fontFamily="@font/pretendardmedium"
-            android:textSize="10sp"
-            android:textColor="@color/grey6"
             android:layout_marginStart="6dp"
-            app:layout_constraintStart_toEndOf="@id/textview_restaurant_name_second"
-            app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name_second"/>
+            android:fontFamily="@font/pretendardmedium"
+            android:text="@{data.categoryTwo}"
+            android:textColor="@color/grey6"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/textview_restaurant_name_second"
+            app:layout_constraintStart_toEndOf="@id/textview_restaurant_name_second" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,8 +12,7 @@ import org.android.wantedhackathon.util.DiffCallback
 class FollowingDetailAdapter() :
     ListAdapter<FeedEntity, FollowingDetailAdapter.FollowingDetailViewHolder>(DiffCallback<FeedEntity>()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FollowingDetailViewHolder {
-        val binding =
-            ItemFeedContentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemFeedContentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FollowingDetailViewHolder(binding)
     }
 
@@ -26,6 +25,5 @@ class FollowingDetailAdapter() :
         }
     }
 
-    class FollowingDetailViewHolder(val binding: ItemFeedContentBinding) :
-        RecyclerView.ViewHolder(binding.root)
+    class FollowingDetailViewHolder(val binding: ItemFeedContentBinding) : RecyclerView.ViewHolder(binding.root)
 }
