@@ -92,36 +92,20 @@
         app:layout_constraintTop_toBottomOf="@id/spinner_entrance_year"
         app:layout_constraintStart_toStartOf="@id/textview_explanation"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_school"
+    <Spinner
+        android:id="@+id/spinner_university"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/background_spinner_university"
+        android:hint="학교 이름을 검색하세요"
+        android:focusable="false"
+        android:textSize="12sp"
+        android:textColor="@color/grey3"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="6dp"
+        android:fontFamily="@font/pretendardregular"
         app:layout_constraintTop_toBottomOf="@id/textview_university"
-        app:layout_constraintStart_toStartOf="@id/textview_university">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edittext_school"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/background_mypage_header"
-            android:hint="학교 이름을 검색하세요"
-            android:focusable="false"
-            android:inputType="number"
-            android:textSize="12sp"
-            android:textColor="@color/grey3"
-            android:fontFamily="@font/pretendardregular"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/button_search"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:background="@drawable/search_icn"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_school"
-        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_school"
-        app:layout_constraintTop_toTopOf="@id/text_input_layout_school" />
+        app:layout_constraintStart_toStartOf="@id/textview_university"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_complete"
@@ -133,8 +117,8 @@
         android:textColor="@color/white"
         android:fontFamily="@font/pretendardbold"
         android:textSize="14sp"
-        android:background="@drawable/button_signup_unactive"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_school"
+        android:background="@drawable/button_signup_selector"
+        app:layout_constraintTop_toBottomOf="@id/spinner_university"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
