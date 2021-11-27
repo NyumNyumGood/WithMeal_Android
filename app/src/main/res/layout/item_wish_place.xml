@@ -49,7 +49,7 @@
             android:id="@+id/textview_updated_user_review"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="갓성비가 내려와~ 적절한 금액대예요"
+            android:text="@{data.comment}"
             android:textSize="12sp"
             android:fontFamily="@font/pretendardregular"
             android:textColor="@color/black"
