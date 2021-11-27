@@ -162,7 +162,7 @@
         android:paddingStart="6dp"
         android:text="23"
         android:drawableStart="@drawable/selector_prefer_checkbox"
-        android:background="@drawable/ic_heart_bg"
+        android:background="@drawable/background_mypage_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewpager_photo_card"/>
 

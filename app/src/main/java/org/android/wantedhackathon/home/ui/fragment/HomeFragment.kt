@@ -50,7 +50,12 @@ class HomeFragment : Fragment(){
     }
     private fun loadFollowing(){
         binding.recyclerviewUserFollowing.run {
-            this.adapter = FollowingUserAdpater()
+            this.adapter = FollowingUserAdpater(object : FollowingUserAdpater.OnItemClickListener{
+                override fun itemClick() {
+                    findNavController().navigate(R.id.action_mainFrameFragment_to_followingDetailFragment)
+                }
+
+            })
             viewModel.followingUserList.observe(viewLifecycleOwner){
                 (adapter as FollowingUserAdpater).submitList(it)
             }
