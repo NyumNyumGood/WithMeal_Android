@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_main"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/mainFrameFragment">
     <fragment
         android:id="@+id/mainFrameFragment"
         android:name="org.android.wantedhackathon.frame.MainFrameFragment"
@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_mainFrameFragment_to_restaurantDetailFragment"
             app:destination="@id/restaurantDetailFragment" />
+        <action
+            android:id="@+id/action_mainFrameFragment_to_followingDetailFragment"
+            app:destination="@id/followingDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -86,5 +89,10 @@
         android:name="org.android.wantedhackathon.home.ui.fragment.RestaurantDetailFragment"
         android:label="RestaurantDetailFragment"
         tools:layout="@layout/fragment_restaurant_detail"/>
+    <fragment
+        android:id="@+id/followingDetailFragment"
+        android:name="org.android.wantedhackathon.home.ui.fragment.FollowingDetailFragment"
+        android:label="FollowingDetailFragment"
+        tools:layout="@layout/fragment_following_detail"/>
 
 </navigation>
