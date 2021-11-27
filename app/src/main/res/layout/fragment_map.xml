@@ -19,25 +19,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="46dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/ic_search_btn"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edittext_following_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="식당을 검색해보세요"
+        android:textColor="@color/grey3"
+        android:fontFamily="@font/pretendardregular"
+        android:textSize="14sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:drawableRight="@drawable/ic_search_icn_3x"
+        android:background="@drawable/background_mypage_header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_storage"
-        android:layout_width="106dp"
+        android:id="@+id/button_my_bookmark"
+        android:layout_width="64dp"
         android:layout_height="28dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/ic_pin_icn_storaged"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        android:text="나의 북마크"
+        android:textColor="@color/black"
+        android:fontFamily="@font/pretendardmedium"
+        android:textSize="10sp"
+        android:layout_marginTop="14dp"
+        android:stateListAnimator="@null"
+        android:background="@drawable/background_mypage_header"
+        app:layout_constraintTop_toBottomOf="@id/edittext_following_nickname"
+        app:layout_constraintStart_toStartOf="@id/edittext_following_nickname"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_my_record"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:text="나의 기록"
+        android:textColor="@color/black"
+        android:fontFamily="@font/pretendardmedium"
+        android:textSize="10sp"
+        android:layout_marginTop="14dp"
+        android:stateListAnimator="@null"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/background_mypage_header"
+        app:layout_constraintTop_toBottomOf="@id/edittext_following_nickname"
+        app:layout_constraintStart_toEndOf="@id/button_my_bookmark"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_following_record"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:text="지인 기록"
+        android:textColor="@color/black"
+        android:fontFamily="@font/pretendardmedium"
+        android:textSize="10sp"
+        android:layout_marginTop="14dp"
+        android:stateListAnimator="@null"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/background_mypage_header"
+        app:layout_constraintTop_toBottomOf="@id/edittext_following_nickname"
+        app:layout_constraintStart_toEndOf="@id/button_my_record"/>
     <com.naver.maps.map.widget.CompassView
         android:id="@+id/compass_view"
         android:layout_width="0dp"
