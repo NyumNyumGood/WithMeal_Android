@@ -49,7 +49,8 @@
         android:fontFamily="@font/pretendardregular"
         android:textSize="12sp"
         android:paddingStart="12dp"
-        android:textColor="@color/grey3"
+        android:textColorHint="@color/grey3"
+        android:textColor="@color/black"
         android:background="@drawable/background_mypage_header"
         app:layout_constraintTop_toBottomOf="@id/textview_id"
         app:layout_constraintStart_toStartOf="@id/textview_id"/>
@@ -76,7 +77,8 @@
         android:fontFamily="@font/pretendardregular"
         android:textSize="12sp"
         android:paddingStart="12dp"
-        android:textColor="@color/grey3"
+        android:textColorHint="@color/grey3"
+        android:textColor="@color/black"
         android:background="@drawable/background_mypage_header"
         app:layout_constraintTop_toBottomOf="@id/textview_password"
         app:layout_constraintStart_toStartOf="@id/textview_password"/>
@@ -91,7 +93,8 @@
         android:fontFamily="@font/pretendardregular"
         android:textSize="12sp"
         android:paddingStart="12dp"
-        android:textColor="@color/grey3"
+        android:textColorHint="@color/grey3"
+        android:textColor="@color/black"
         android:background="@drawable/background_mypage_header"
         app:layout_constraintTop_toBottomOf="@id/edittext_password"
         app:layout_constraintStart_toStartOf="@id/edittext_password"/>
@@ -100,7 +103,7 @@
         android:id="@+id/button_complete"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:background="@drawable/button_signup_unactive"
+        android:background="@drawable/button_signup_selector"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="40dp"
         android:stateListAnimator="@null"

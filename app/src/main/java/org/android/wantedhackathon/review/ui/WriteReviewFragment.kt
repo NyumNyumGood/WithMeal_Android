@@ -50,6 +50,7 @@ class WriteReviewFragment: Fragment() {
         changeWriteReviewProgress()
         setSelectedTagList()
         writeNextStep()
+        completeReview()
     }
 
     private fun getPictures() {
@@ -102,6 +103,14 @@ class WriteReviewFragment: Fragment() {
                     1 -> "작성 완료"
                     else -> throw RuntimeException("error to find progress write review")
                 }
+            }
+        }
+    }
+
+    private fun completeReview(){
+        if(viewModel.writeReviewProgress.value == 1) {
+            binding.textviewNextButton.setOnClickListener {
+                findNavController().navigate(R.id.action_writeReviewFragment_to_myPageFragment)
             }
         }
     }

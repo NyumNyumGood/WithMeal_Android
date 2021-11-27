@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_mainFrameFragment_to_writeReviewFragment"
             app:destination="@id/writeReviewFragment" />
+        <action
+            android:id="@+id/action_mainFrameFragment_to_registerRestaurantFragment"
+            app:destination="@id/registerRestaurantFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -114,6 +117,22 @@
         <argument
             android:name="pictures"
             app:argType="string[]" />
+        <action
+            android:id="@+id/action_writeReviewFragment_to_registerRestaurantFragment"
+            app:destination="@id/registerRestaurantFragment" />
+        <action
+            android:id="@+id/action_writeReviewFragment_to_myPageFragment"
+            app:destination="@id/myPageFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/registerRestaurantFragment"
+        android:name="org.android.wantedhackathon.review.ui.RegisterRestaurantFragment"
+        android:label="RegisterRestaurantFragment"
+        tools:layout="@layout/fragment_register_restaurant"/>
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="org.android.wantedhackathon.mypage.ui.fragment.MyPageFragment"
+        android:label="MyPageFragment" />
+
 
 </navigation>
