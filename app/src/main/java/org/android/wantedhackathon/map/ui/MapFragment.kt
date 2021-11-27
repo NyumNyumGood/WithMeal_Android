@@ -109,6 +109,7 @@ class MapFragment :Fragment(), OnMapReadyCallback{
 
     }
 
+
     private fun setImageList(){
         val list = ArrayList<String>()
         list.add("https://i.ytimg.com/vi/7Xu_s1YJhyg/maxresdefault.jpg")

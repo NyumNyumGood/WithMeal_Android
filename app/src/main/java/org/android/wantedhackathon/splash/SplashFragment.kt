@@ -34,12 +34,11 @@ class SplashFragment : Fragment(), CoroutineScope {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
         launchSplash()
-        animateLogo()
     }
 
     private fun launchSplash(){
         launch {
-            delay(1500)
+            delay(1000)
             withContext(Dispatchers.Main){
                 findNavController().navigate(R.id.action_splashFragment_to_introFragment)
             }

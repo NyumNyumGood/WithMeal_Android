@@ -104,16 +104,28 @@ class FollowingViewModel @Inject constructor() : DisposableViewModel(){
                 "카페,디저트"
             ),
             AddFollowingEntity(
-                R.drawable.follow2,
-                "먹어보자",
+                R.drawable.add3,
+                "귤귤",
+                "규니님외 2명이 필로우합니다",
+                R.drawable.follow,
+                R.drawable.intersect5,
+                R.drawable.intersect6,
+                "만스피자",
+                "경성초밥",
+                "패스트푸드",
+                "일식"
+            ),
+            AddFollowingEntity(
+                R.drawable.add4,
+                "몽이",
                 "규니님이 필로우합니다",
                 R.drawable.follow,
-                R.drawable.intersect3,
-                R.drawable.intersect4,
-                "nevernever",
-                "라라브레드",
-                "와인",
-                "카페,디저트"
+                R.drawable.intersect7,
+                R.drawable.intersect8,
+                "연안식당",
+                "먹자부대찌개",
+                "해물,생선요리",
+                "찌개,전골"
             )
         )
         _addFollowing.value = addFollowing
