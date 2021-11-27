@@ -9,8 +9,11 @@ import org.android.wantedhackathon.databinding.ItemNewContentBinding
 import org.android.wantedhackathon.home.data.NewContentEntity
 import org.android.wantedhackathon.util.DiffCallback
 
-class NewReviewAdapter() :
+class NewReviewAdapter(val listener : NewReviewAdapter.OnItemClickListener) :
     ListAdapter<NewContentEntity, NewReviewAdapter.NewReviewViewHolder>(DiffCallback<NewContentEntity>()){
+    interface OnItemClickListener{
+        fun itemClick()
+    }
     class NewReviewViewHolder(val binding : ItemNewContentBinding):
         RecyclerView.ViewHolder(binding.root)
 
@@ -33,5 +36,7 @@ class NewReviewAdapter() :
         holder.binding.imageListFollowers.setImageSize(30)
         holder.binding.imageListFollowers.setImageList(list)
         holder.binding.imageListFollowers.setTextSize(8)
+        holder.binding.root.setOnClickListener { listener.itemClick()}
+
     }
 }

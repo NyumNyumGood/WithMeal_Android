@@ -40,12 +40,7 @@ class FeedFragment : Fragment() {
     private fun fetchFeedReviews(){
         binding.recyclerviewFeed.run {
             isNestedScrollingEnabled = false
-            this.adapter = FeedReviewAdapter(object : FeedReviewAdapter.OnItemClickListener{
-                override fun itemClick() {
-                    findNavController().navigate(R.id.action_mainFrameFragment_to_restaurantDetailFragment)
-                }
-
-            })
+            this.adapter = FeedReviewAdapter()
             viewModel.feedReviewList.observe(viewLifecycleOwner){
                 (adapter as FeedReviewAdapter).submitList(it)
             }

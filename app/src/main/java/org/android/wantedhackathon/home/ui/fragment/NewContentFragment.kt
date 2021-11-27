@@ -6,8 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.FragmentNewContentBinding
+import org.android.wantedhackathon.home.ui.adapter.FeedReviewAdapter
 import org.android.wantedhackathon.home.ui.adapter.NewReviewAdapter
 import org.android.wantedhackathon.home.viewmodel.HomeViewModel
 import org.android.wantedhackathon.util.AutoClearedValue
@@ -34,7 +37,12 @@ class NewContentFragment : Fragment(){
     }
     private fun fetchNewReviewList(){
         binding.recyclerviewUpdatedReview.run{
-            this.adapter = NewReviewAdapter()
+            this.adapter = NewReviewAdapter(object : NewReviewAdapter.OnItemClickListener{
+                override fun itemClick() {
+                    findNavController().navigate(R.id.action_mainFrameFragment_to_restaurantDetailFragment)
+                }
+
+            })
             viewModel.newReviewList.observe(viewLifecycleOwner){
                 (adapter as NewReviewAdapter).submitList(it)
             }

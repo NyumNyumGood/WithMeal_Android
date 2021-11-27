@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.FragmentSetNickNameBinding
 import org.android.wantedhackathon.util.AutoClearedValue
 
@@ -26,10 +27,15 @@ class SetNickNameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         popBackStack()
+        initMain()
     }
 
     private fun popBackStack(){
         binding.buttonReturn.setOnClickListener { findNavController().popBackStack() }
+    }
+
+    private fun initMain(){
+        with(binding){ buttonComplete.setOnClickListener { findNavController().navigate(R.id.action_setNickNameFragment_to_mainFrameFragment) }}
     }
 
 
