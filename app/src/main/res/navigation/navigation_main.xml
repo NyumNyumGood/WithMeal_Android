@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_main"
-    app:startDestination="@id/mainFrameFragment">
+    app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/mainFrameFragment"
         android:name="org.android.wantedhackathon.frame.MainFrameFragment"
@@ -76,7 +76,11 @@
         android:id="@+id/setNickNameFragment"
         android:name="org.android.wantedhackathon.signup.ui.fragment.SetNickNameFragment"
         android:label="SetNickNameFragment"
-        tools:layout="@layout/fragment_set_nick_name"/>
+        tools:layout="@layout/fragment_set_nick_name">
+        <action
+            android:id="@+id/action_setNickNameFragment_to_mainFrameFragment"
+            app:destination="@id/mainFrameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/restaurantDetailFragment"
         android:name="org.android.wantedhackathon.home.ui.fragment.RestaurantDetailFragment"
