@@ -16,14 +16,19 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.databinding.FragmentReviewBinding
+import org.android.wantedhackathon.frame.MainFrameFragmentDirections
 import org.android.wantedhackathon.util.AutoClearedValue
 import java.io.File
 
 @AndroidEntryPoint
 class ReviewFragment : Fragment() {
     private lateinit var pictureUri: Uri
+    private val pictures = mutableListOf<Uri>()
+    private val viewModel: ReviewViewModel by viewModels()
     private var binding by AutoClearedValue<FragmentReviewBinding>()
 
     override fun onCreateView(
@@ -38,13 +43,23 @@ class ReviewFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
-        loadCamera()
+        loadPictures()
 
+        viewModel.uploadPictures.observe(viewLifecycleOwner) {
+            if(!it.isNullOrEmpty()) {
+                val action = MainFrameFragmentDirections.actionMainFrameFragmentToWriteReviewFragment(it.map { it.toString() }.toTypedArray())
+                findNavController().navigate(action)
+                viewModel.initializeImages()
+            }
+        }
     }
 
-    private fun loadCamera() {
+    private fun loadPictures() {
         binding.buttonCamera.setOnClickListener {
             requestCameraPermission.launch(PERMISSION_REQUESTED)
+        }
+        binding.buttonGallery.setOnClickListener {
+            requestGalleryPermission.launch(PERMISSION_REQUESTED)
         }
     }
 
@@ -56,6 +71,24 @@ class ReviewFragment : Fragment() {
                 takePicture()
             }
         }
+
+    private val requestGalleryPermission =
+        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
+            if (it.values.filter { allowed -> allowed == false }.count() != 0) {
+                Toast.makeText(requireContext(), "권한을 모두 허용해주세요", Toast.LENGTH_SHORT).show()
+            } else {
+                galleryActivityLauncher.launch("image/*")
+            }
+        }
+
+    private val galleryActivityLauncher =
+        registerForActivityResult(ActivityResultContracts.GetMultipleContents()) { imageList ->
+            imageList.forEach { uri ->
+                pictures.add(uri)
+            }
+            viewModel.changeUploadPictures(imageList)
+        }
+
 
     private fun takePicture() {
         val photoFile = File.createTempFile(

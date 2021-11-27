@@ -1,5 +1,6 @@
 package org.android.wantedhackathon.util
 
+import android.net.Uri
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -12,6 +13,14 @@ import org.android.wantedhackathon.R
 object BindingAdapter {
     private const val HASH_TAG = "#"
     private const val SPACING = " "
+
+    @JvmStatic
+    @BindingAdapter("setImageUri")
+    fun ImageView.setImageUri(uri: Uri?) {
+        uri?.let {
+            load(uri)
+        }
+    }
 
     @JvmStatic
     @BindingAdapter("setImageURL")
