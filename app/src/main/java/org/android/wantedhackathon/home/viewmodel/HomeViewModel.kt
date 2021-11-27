@@ -97,7 +97,7 @@ class HomeViewModel @Inject constructor(
             ),
             FollowingEntity(
                 null,
-                R.drawable.profile_img,
+                R.drawable.dochi7,
                 R.string.following_nickname6
             )
         )

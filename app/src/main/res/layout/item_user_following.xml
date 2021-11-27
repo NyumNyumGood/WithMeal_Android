@@ -23,9 +23,8 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_following_profile"
         loadDrawable="@{data.image}"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="2dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:background="@drawable/profile_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

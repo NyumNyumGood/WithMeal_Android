@@ -35,7 +35,7 @@ class IntroFragment : Fragment(), CoroutineScope {
     }
     private fun launchScope() {
         launch {
-            delay(2000)
+            delay(1800)
             withContext(Dispatchers.Main) {
                 findNavController().navigate(R.id.action_introFragment_to_loginFragment)
             }

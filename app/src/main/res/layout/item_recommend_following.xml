@@ -56,9 +56,10 @@
             app:layout_constraintStart_toEndOf="@id/circleimage_following"
             app:layout_constraintStart_toStartOf="@id/textview_id" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/imageview_case"
-            loadDrawable="@{data.case}"
+            android:button="@null"
+            android:background="@drawable/selector_add_following"
             android:layout_width="44dp"
             android:layout_height="24dp"
             android:layout_marginTop="26dp"

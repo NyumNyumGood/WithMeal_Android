@@ -20,7 +20,6 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 tools:listitem="@layout/item_feed_content"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

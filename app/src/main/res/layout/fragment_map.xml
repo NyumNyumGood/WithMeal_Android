@@ -177,5 +177,6 @@
         app:layout_constraintStart_toEndOf="@id/image_list_user"
         app:layout_constraintBottom_toBottomOf="@id/image_list_user"/>
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
