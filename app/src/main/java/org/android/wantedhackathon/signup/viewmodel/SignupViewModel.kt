@@ -1,4 +1,4 @@
-package org.android.wantedhackathon.signup
+package org.android.wantedhackathon.signup.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

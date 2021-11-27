@@ -1,7 +1,6 @@
 package org.android.wantedhackathon.signup.ui.fragment
 
 
-import android.database.DataSetObserver
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.wantedhackathon.R
 import org.android.wantedhackathon.databinding.FragmentSignupBinding
-import org.android.wantedhackathon.signup.SignupViewModel
+import org.android.wantedhackathon.signup.viewmodel.SignupViewModel
 import org.android.wantedhackathon.signup.data.EntranceSpinnerModel
 import org.android.wantedhackathon.signup.data.UniversitySpinnerModel
 import org.android.wantedhackathon.signup.ui.adapter.SearchUniversityAdapter

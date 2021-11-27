@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="(필수)"
                 android:textSize="14dp"
+                android:visibility="visible"
                 android:layout_marginStart="2dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/pretendardlight"
@@ -52,6 +53,7 @@
                 android:text="+"
                 android:textColor="@color/black"
                 android:textSize="22dp"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/textview_must"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/textview_select_restaurant" />

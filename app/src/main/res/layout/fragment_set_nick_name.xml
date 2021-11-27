@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_return"
         android:layout_width="24dp"
@@ -13,6 +15,7 @@
         android:background="@drawable/ic_back_icn_3x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textview_signup"
         android:layout_width="wrap_content"
@@ -25,6 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button_return" />
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textview_set_nickname"
         android:layout_width="wrap_content"
@@ -70,7 +74,8 @@
         android:fontFamily="@font/pretendardregular"
         android:textSize="12sp"
         android:paddingStart="12dp"
-        android:textColor="@color/grey3"
+        android:textColorHint="@color/grey3"
+        android:textColor="@color/black"
         android:background="@drawable/background_mypage_header"
         app:layout_constraintTop_toBottomOf="@id/imageview_nickname"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,11 +95,6 @@
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/edittext_set_nickname"
         app:layout_constraintTop_toBottomOf="@id/edittext_set_nickname"/>
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

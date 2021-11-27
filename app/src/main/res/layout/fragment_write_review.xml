@@ -7,20 +7,23 @@
             name="viewModel"
             type="org.android.wantedhackathon.review.viewmodel.ReviewViewModel" />
     </data>
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/ic_back_icn_3x"
                 app:layout_constraintTop_toTopOf="parent"
@@ -83,7 +86,6 @@
                 app:layout_constraintTop_toBottomOf="@id/textview_image_count"
                 app:layout_constraintStart_toStartOf="@id/textview_image_count"
                 app:layout_constraintEnd_toEndOf="@id/textview_image_count"/>
-
             <View
                 android:id="@+id/view_border_second"
                 android:layout_width="match_parent"
@@ -123,7 +125,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="다음"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
